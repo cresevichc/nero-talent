@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { inter } from './layout';
+import { inter, playfair } from './layout';
 
 export default function Page() {
 
@@ -23,7 +23,8 @@ export default function Page() {
       subtitle: "Technology Talent Advisory",
       sequence: [
         "EXECUTION DEFINES REPUTATION",
-        "SELECTIVE MANDATES · STRUCTURED DELIVERY",
+        "SELECTIVE MANDATES",
+        "STRUCTURED DELIVERY",
         "HIRING IS ARCHITECTURE"
       ],
       positioning: [
@@ -143,7 +144,7 @@ engagement: [
   };
 
   const t = content[language];
-
+  const globalHero = content.EN;
   useEffect(() => {
     const items = document.querySelectorAll('.frame-item');
     if (!items.length) return;
@@ -179,15 +180,16 @@ engagement: [
         <div className="vertical-line" />
 
         <div className="content">
-          <h1 className="hero-title">NERO TALENT</h1>
-          <p className={`subtitle ${inter.className}`}>{t.subtitle}</p>
+          <h1 className={`hero-title ${playfair.className}`}>NERO TALENT</h1>
+          <p className={`subtitle ${inter.className}`}>{globalHero.subtitle}</p>
         </div>
       </section>
       <section className="sequence">
-        <div className="sequence-text text-1">{t.sequence[0]}</div>
-        <div className="sequence-text text-2">{t.sequence[1]}</div>
-        <div className="sequence-text text-3">{t.sequence[2]}</div>
-      </section>
+  <div className="sequence-text text-1">{globalHero.sequence[0]}</div>
+  <div className="sequence-text text-2">{globalHero.sequence[1]}</div>
+  <div className="sequence-text text-3">{globalHero.sequence[2]}</div>
+  <div className="sequence-text text-4">{globalHero.sequence[3]}</div>
+</section>
 
       <section className="positioning">
         <div className="positioning-content">

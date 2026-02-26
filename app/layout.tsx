@@ -23,13 +23,13 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-[#0D0D0F] text-[#F5F7FA]">
         <LanguageProvider>
-          <div className={playfair.className}>
-            {children}
-          </div>
+          <div className={inter.className}>
+  {children}
+</div>
         </LanguageProvider>
       </body>
     </html>
   );
 }
 
-export { inter };
+export { inter, playfair };
