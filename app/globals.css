@@ -27,7 +27,7 @@ body {
 }
 
 .vertical-line {
-  position: fixed;
+  position: absolute;
   left: 7%;
   top: 0;
   width: 2px;
