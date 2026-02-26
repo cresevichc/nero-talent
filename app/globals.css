@@ -23,10 +23,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 6vw;
 }
 
 .vertical-line {
-  position: absolute;
+  position: fixed;
   left: 7%;
   top: 0;
   width: 2px;
@@ -56,7 +57,7 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(5.5rem, 11vw, 8.5rem);
+  font-size: clamp(3.2rem, 10vw, 8.5rem);
   font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 0.95;
@@ -444,4 +445,9 @@ body {
   line-height: 1.7;
   opacity: 0.85;
   font-size: 15px;
+}
+@media (max-width: 1024px) {
+  .vertical-line {
+    display: none;
+  }
 }
