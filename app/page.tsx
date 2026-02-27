@@ -72,10 +72,11 @@ whenClosing: "Structured growth requires structured hiring.",
     IT: {
       subtitle: "Advisory Strategico per Talent Technology",
       sequence: [
-        "L'ESECUZIONE DEFINISCE LA REPUTAZIONE",
-        "MANDATI SELETTIVI · CONSEGNA STRUTTURATA",
-        "L'HIRING È ARCHITETTURA"
-      ],
+  "L'ESECUZIONE DEFINISCE LA REPUTAZIONE",
+  "MANDATI SELETTIVI",
+  "CONSEGNA STRUTTURATA",
+  "L'HIRING È ARCHITETTURA"
+],
       positioning: [
         "Le aziende in crescita non falliscono per mancanza di talento, ma per l'assenza di struttura e visione nel modo in cui costruiscono il proprio team.",
         "In NERO l'hiring è architettura. Ogni mandato viene progettato ed eseguito all'interno di un framework definito — non come semplice intermediazione, ma come costruzione strategica."
@@ -89,6 +90,15 @@ whenClosing: "Structured growth requires structured hiring.",
         { heading: "Controllo della Shortlist", text: "Solo candidati qualificati e pre-allineati." },
         { heading: "Supervisione dell'Esecuzione", text: "Cicli di feedback disciplinati e responsabilità decisionale." }
       ],
+      whenTitle: "QUANDO NERO PUÒ SUPPORTARTI",
+whenIntro: "NERO può supportarti quando l’hiring inizia a impattare la struttura della tua azienda, non solo l’operatività quotidiana.",
+whenPoints: [
+  "Quando la definizione del ruolo non è pienamente allineata tra i decisori.",
+  "Quando sono coinvolti più interlocutori ma non esiste un ownership chiaro del processo.",
+  "Quando assunzioni precedenti hanno generato più frizione che stabilità.",
+  "Quando la crescita smette di essere spontanea e inizia a richiedere metodo."
+],
+whenClosing: "La crescita strutturata richiede un hiring strutturato.",
       engagementTitle: "Struttura di Collaborazione",
       engagementSubtitle: "Modelli di collaborazione progettati per chiarezza e responsabilità.",
       engagement: [
@@ -112,10 +122,11 @@ whenClosing: "Structured growth requires structured hiring.",
     ES: {
       subtitle: "Consultoría Estratégica en Talento Tecnológico",
       sequence: [
-        "LA EJECUCIÓN DEFINE LA REPUTACIÓN",
-        "MANDATOS SELECTIVOS · ENTREGA ESTRUCTURADA",
-        "CONTRATAR ES ARQUITECTURA"
-      ],
+  "LA EJECUCIÓN DEFINE LA REPUTACIÓN",
+  "MANDATOS SELECTIVOS",
+  "ENTREGA ESTRUCTURADA",
+  "CONTRATAR ES ARQUITECTURA"
+],
       positioning: [
         "Las empresas en crecimiento no fracasan por falta de talento, sino por la ausencia de estructura y visión en la forma en que contratan.",
         "En NERO entendemos la contratación como arquitectura. Cada mandato se diseña y ejecuta bajo un marco estructurado — no como intermediación, sino como construcción estratégica."
@@ -129,6 +140,15 @@ whenClosing: "Structured growth requires structured hiring.",
         { heading: "Control de Shortlist", text: "Solo candidatos cualificados y prealineados." },
         { heading: "Supervisión de Ejecución", text: "Ciclos de feedback disciplinados y responsabilidad decisional." }
       ],
+      whenTitle: "CUÁNDO NERO PUEDE AYUDARTE",
+whenIntro: "NERO puede ayudarte cuando la contratación empieza a impactar la estructura de tu empresa, no solo la operativa diaria.",
+whenPoints: [
+  "Cuando la definición del rol no está completamente alineada entre los decisores.",
+  "Cuando participan varios interlocutores pero no existe un ownership claro del proceso.",
+  "Cuando contrataciones anteriores han generado más fricción que estabilidad.",
+  "Cuando el crecimiento deja de ser espontáneo y empieza a requerir método."
+],
+whenClosing: "El crecimiento estructurado exige una contratación estructurada.",
       engagementTitle: "Estructura de Colaboración",
 engagementSubtitle: "Modelos con enfoque estructurado y responsabilidad definida.",
 engagement: [
@@ -222,6 +242,7 @@ engagement: [
         ))}
 
         <div className="frame-closing">{t.frameClosing}</div>
+        <div className="section-divider" />
       </section>
       <section className={`when-section ${inter.className}`}>
   <div className="when-wrapper">
