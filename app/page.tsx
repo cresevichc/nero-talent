@@ -140,7 +140,7 @@ whenClosing: "La crescita strutturata richiede un hiring strutturato.",
         { heading: "Control de Shortlist", text: "Solo candidatos cualificados y prealineados." },
         { heading: "Supervisión de Ejecución", text: "Ciclos de feedback disciplinados y responsabilidad decisional." }
       ],
-      whenTitle: "CUÁNDO NERO PUEDE AYUDARTE",
+      whenTitle: "CUANDO NERO PUEDE AYUDARTE",
 whenIntro: "NERO puede ayudarte cuando la contratación empieza a impactar la estructura de tu empresa, no solo la operativa diaria.",
 whenPoints: [
   "Cuando la definición del rol no está completamente alineada entre los decisores.",
