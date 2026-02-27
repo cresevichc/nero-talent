@@ -40,6 +40,15 @@ export default function Page() {
         { heading: "Shortlist Control", text: "Pre-aligned, qualified candidates only." },
         { heading: "Execution Oversight", text: "Disciplined feedback cycles, timeline control and decision accountability." }
       ],
+      whenTitle: "WHEN NERO CAN HELP",
+whenIntro: "NERO can support you when hiring starts impacting the structure of your company, not just daily operations.",
+whenPoints: [
+  "When role definition is not fully aligned among decision-makers.",
+  "When multiple stakeholders are involved but there is no clear process ownership.",
+  "When previous hires have created friction instead of stability.",
+  "When growth stops being spontaneous and starts requiring method."
+],
+whenClosing: "Structured growth requires structured hiring.",
       engagementTitle: "Engagement Structure",
       engagementSubtitle: "Structured collaboration models designed for clarity and accountability.",
       engagement: [
@@ -214,6 +223,22 @@ engagement: [
 
         <div className="frame-closing">{t.frameClosing}</div>
       </section>
+      <section className={`when-section ${inter.className}`}>
+  <div className="when-wrapper">
+    <h2 className="when-title">{t.whenTitle}</h2>
+    <p className="when-intro">{t.whenIntro}</p>
+
+    <div className="when-list">
+      {t.whenPoints.map((point, index) => (
+        <div key={index} className="when-item">
+          {point}
+        </div>
+      ))}
+    </div>
+
+    <div className="when-closing">{t.whenClosing}</div>
+  </div>
+</section>
 
       <section className={`engagement ${inter.className}`}>
         <h2 className="engagement-title">{t.engagementTitle}</h2>
