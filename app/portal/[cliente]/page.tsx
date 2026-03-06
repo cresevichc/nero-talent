@@ -124,7 +124,7 @@ marginBottom: "18px",
 fontFamily: '"Playfair Display", serif'
 }}
 >
-CLIENT PORTAL — {data.attive[0]?.cliente || params.cliente.toUpperCase()}
+CLIENT PORTAL — {params.cliente.toUpperCase()}
 </p>
 
 <div
