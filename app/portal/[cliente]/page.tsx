@@ -5,7 +5,7 @@ export default async function PortalCliente({ params }: { params: { cliente: str
 const { cliente } = await params
 
 const res = await fetch(
-`http://localhost:3000/api/vacantes?cliente=${cliente}`,
+`https://nerotalent.com/api/vacantes?cliente=${params.cliente}`,
 { cache: "no-store" }
 )
 
