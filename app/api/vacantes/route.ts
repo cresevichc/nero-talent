@@ -4,7 +4,7 @@ export async function GET(request: Request) {
 
   const sheetId = "1vLNptsuq-ZYgXLIa5WkaQLu7orvz2wQ_OCcTLbW9xZk";
 
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/VACANTES?key=${process.env.GOOGLE_API_KEY}`;
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/VACANTES?key=${process.env.google_api_key}`;
 
   const res = await fetch(url);
   const data = await res.json();
