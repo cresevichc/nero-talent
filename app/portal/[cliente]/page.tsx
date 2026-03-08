@@ -15,6 +15,38 @@ if (!token) {
     </div>
   )
 }
+const sheetId = "1vLNptsuq-ZYgXLIa5WkaQLu7orvz2wQ_OCcTLbW9xZk"
+
+const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/CLIENTES?key=${process.env.google_api_key}`
+
+const resClientes = await fetch(url)
+const dataClientes = await resClientes.json()
+
+const rowsClientes = dataClientes.values || []
+
+const headersClientes = rowsClientes[0]
+const recordsClientes = rowsClientes.slice(1)
+
+const clientes = recordsClientes.map((row:any[]) => {
+  const obj:any = {}
+  headersClientes.forEach((header:string, index:number) => {
+    obj[header] = row[index] || ""
+  })
+  return obj
+})
+
+const clienteData = clientes.find(
+  (c:any) => c["Cliente ID"].toLowerCase() === cliente.toLowerCase()
+)
+
+if (!clienteData || clienteData["Token"] !== token) {
+  return (
+    <div style={{textAlign:"center",marginTop:"100px"}}>
+      <h1>Access denied</h1>
+      <p>Invalid portal token.</p>
+    </div>
+  )
+}
 const { cliente } = params
 
 const res = await fetch(
