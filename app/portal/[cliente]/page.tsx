@@ -6,6 +6,7 @@ export default async function PortalCliente({
   params: { cliente: string }
   searchParams: { token?: string }
 }) {
+const { cliente } = params  
 const token = searchParams?.token
 if (!token) {
   return (
@@ -47,7 +48,6 @@ if (!clienteData || clienteData["Token"] !== token) {
     </div>
   )
 }
-const { cliente } = params
 
 const res = await fetch(
 `https://nerotalent.com/api/vacantes?cliente=${params.cliente}`,
