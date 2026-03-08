@@ -25,7 +25,19 @@ const dataClientes = await resClientes.json()
 
 const rowsClientes = dataClientes.values || []
 
-const headersClientes = rowsClientes[0]
+if (rowsClientes.length === 0) {
+  return (
+    <div style={{textAlign:"center",marginTop:"100px"}}>
+      <h1>Access denied</h1>
+      <p>Client data unavailable.</p>
+    </div>
+  )
+}
+
+const headersClientes = rowsClientes[0].map((h:string) =>
+  h.replace(/\n/g, " ").replace(/\s+/g, " ").trim()
+)
+
 const recordsClientes = rowsClientes.slice(1)
 
 const clientes = recordsClientes.map((row:any[]) => {
