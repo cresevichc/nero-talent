@@ -1,5 +1,5 @@
 export const runtime = "nodejs";
-
+export const revalidate = 60;
 export async function GET(request: Request) {
 
   const sheetId = "1vLNptsuq-ZYgXLIa5WkaQLu7orvz2wQ_OCcTLbW9xZk";

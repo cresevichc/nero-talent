@@ -1,8 +1,21 @@
 import VacancyCard from "@/app/components/VacancyCard"
-export const revalidate = 60
-export default async function PortalCliente({ params }: { params: { cliente: string } }) {
-
-const { cliente } = await params
+export default async function PortalCliente({
+  params,
+  searchParams
+}: {
+  params: { cliente: string }
+  searchParams: { token?: string }
+}) {
+const token = searchParams?.token
+if (!token) {
+  return (
+    <div style={{textAlign:"center",marginTop:"100px"}}>
+      <h1>Access denied</h1>
+      <p>Invalid portal link.</p>
+    </div>
+  )
+}
+const { cliente } = params
 
 const res = await fetch(
 `https://nerotalent.com/api/vacantes?cliente=${params.cliente}`,
