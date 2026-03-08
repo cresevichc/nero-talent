@@ -40,7 +40,7 @@ const clienteData = clientes.find(
   (c:any) => c["Cliente ID"].toLowerCase() === cliente.toLowerCase()
 )
 
-if (!clienteData || clienteData["Token"] !== token) {
+if (!clienteData || clienteData["Token"].trim() !== token.trim()) {
   return (
     <div style={{textAlign:"center",marginTop:"100px"}}>
       <h1>Access denied</h1>
