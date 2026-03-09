@@ -1,6 +1,19 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Playfair_Display, Inter } from 'next/font/google';
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  display: 'swap',
+});
 export default function Page() {
 
   const [language, setLanguage] = useState<'EN' | 'IT' | 'ES'>('EN');
