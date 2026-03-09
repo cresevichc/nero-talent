@@ -126,7 +126,8 @@ acc +
 (v.pipeline?.offer || 0)
 ,0)
 
-const placements = data.attive.reduce(
+const placements =
+[...data.chiuseRecenti, ...data.storico].reduce(
 (acc:any,v:any)=> acc + (v.pipeline?.hire || 0)
 ,0)
 const pipelineHR = data.attive.reduce(
