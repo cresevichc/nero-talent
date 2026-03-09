@@ -3,7 +3,7 @@ import './globals.css';
 import { Playfair_Display, Inter } from 'next/font/google';
 import { LanguageProvider } from '../context/LanguageContext';
 export const metadata: Metadata = {
-  title: "NERO Talent | Technology Talent Advisory for Startups & Scale-ups",
+  title: "NERO Talent | Technology Talent Advisory for Startups and Scale-ups",
   description:
     "NERO Talent is a boutique technology talent advisory partnering with startups and scale-ups across Europe. Selective mandates. Structured delivery.",
 };
