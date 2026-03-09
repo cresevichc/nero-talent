@@ -15,7 +15,7 @@ const inter = Inter({
   weight: ['400', '500'],
   display: 'swap',
 });
-export { metadata };
+
 export default function RootLayout({
   children,
 }: {
