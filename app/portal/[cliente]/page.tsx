@@ -193,7 +193,7 @@ CLIENT PORTAL — {params.cliente.toUpperCase()}
 <div
 style={{
 display: "grid",
-gridTemplateColumns: "repeat(4,220px)",
+gridTemplateColumns: "repeat(4,minmax(200px,220px))",
 gap: "20px",
 marginTop: "30px",
 marginBottom: "40px",
