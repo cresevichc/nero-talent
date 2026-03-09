@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import './globals.css';
 import { Playfair_Display, Inter } from 'next/font/google';
-import { LanguageProvider } from '../context/LanguageContext';
+import Providers from './providers';
 
 
 const playfair = Playfair_Display({
@@ -24,11 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#0D0D0F] text-[#F5F7FA]">
-        <LanguageProvider>
+        <Providers></Providers>
           <div className={inter.className}>
   {children}
 </div>
-        </LanguageProvider>
+        </Providers>
       </body>
     </html>
   );
