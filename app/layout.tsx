@@ -32,5 +32,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-export { inter, playfair };
