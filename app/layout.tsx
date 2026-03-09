@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import './globals.css';
-import { Playfair_Display, Inter } from 'next/font/google';
-import { LanguageProvider } from '../context/LanguageContext';
-
+import { metadata } from "./metadata";
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -15,7 +13,7 @@ const inter = Inter({
   weight: ['400', '500'],
   display: 'swap',
 });
-
+export { metadata };
 export default function RootLayout({
   children,
 }: {
