@@ -1,5 +1,4 @@
 'use client';
-import { inter } from '../layout';
 import { useEffect, useState } from 'react';
 
 export default function Cookie() {
