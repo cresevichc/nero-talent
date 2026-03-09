@@ -1,8 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { inter, playfair } from './layout';
-
 export default function Page() {
 
   const [language, setLanguage] = useState<'EN' | 'IT' | 'ES'>('EN');
