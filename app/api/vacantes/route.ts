@@ -61,7 +61,7 @@ export async function GET(request: Request) {
     client: Number(v["Colloqui Cliente"] || 0),
     feedback: Number(v["In Attesa di Feedback"] || 0),
     offer: Number(v["Offerte Attive"] || 0),
-    hire: Number(v["Candidati Assunti"] || 0)
+    hire: Number(v["Candidati Assunti"] || 0),
     scartato: Number(v["Scartato"] || 0),
   },
 
