@@ -1,5 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { Inter } from 'next/font/google';
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  display: 'swap',
+});
 
 export default function Cookie() {
 

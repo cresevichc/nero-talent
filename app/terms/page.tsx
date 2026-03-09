@@ -1,5 +1,11 @@
 'use client';
-import { inter } from '../layout';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  display: 'swap',
+});
 import { useEffect, useState } from 'react';
 
 export default function Terms() {
