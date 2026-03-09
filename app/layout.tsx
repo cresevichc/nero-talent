@@ -1,6 +1,5 @@
 import './globals.css';
 import { Playfair_Display, Inter } from 'next/font/google';
-import Providers from './providers';
 export const metadata = {
   title: "NERO Talent | Technology Talent Advisory for Startups and Scale-ups",
   description:
