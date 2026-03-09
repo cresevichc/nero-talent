@@ -102,6 +102,7 @@ PIPELINE
 <p>Offer: {v.pipeline.offer}</p>
 
 <p>Hire: {v.pipeline.hire}</p>
+<p>Scartato: {v.pipeline.scartato}</p>
 
 </div>
 
