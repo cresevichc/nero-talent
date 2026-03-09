@@ -130,6 +130,11 @@ const placements =
 [...data.chiuseRecenti, ...data.storico].reduce(
 (acc:any,v:any)=> acc + (v.pipeline?.hire || 0)
 ,0)
+const totalSearches =
+data.attive.length + data.chiuseRecenti.length + data.storico.length
+
+const successRate =
+totalSearches === 0 ? 0 : Math.round((placements / totalSearches) * 100)
 const pipelineHR = data.attive.reduce(
 (acc:any,v:any)=> acc + (v.pipeline?.hr || 0)
 ,0)
@@ -188,7 +193,7 @@ CLIENT PORTAL — {params.cliente.toUpperCase()}
 <div
 style={{
 display: "grid",
-gridTemplateColumns: "repeat(3,220px)",
+gridTemplateColumns: "repeat(4,220px)",
 gap: "20px",
 marginTop: "30px",
 marginBottom: "40px",
@@ -230,6 +235,17 @@ borderRadius: "10px"
 >
 <h1 style={{margin:0}}>{placements}</h1>
 <p style={{opacity:0.7,marginTop:"10px"}}>PLACEMENTS</p>
+</div>
+<div
+style={{
+padding: "20px",
+background: "#111",
+border: "1px solid #222",
+borderRadius: "10px"
+}}
+>
+<h1 style={{margin:0}}>{successRate}%</h1>
+<p style={{opacity:0.7,marginTop:"10px"}}>SUCCESS RATE</p>
 </div>
 
 </div>
