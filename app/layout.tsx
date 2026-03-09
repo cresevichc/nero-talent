@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import './globals.css';
 export const metadata = {
   title: "NERO Talent | Technology Talent Advisory for Startups and Scale-ups",
