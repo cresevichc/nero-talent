@@ -27,12 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#0D0D0F] text-[#F5F7FA]">
-        <Providers>
-          <div className={inter.className}>
-  {children}
-</div>
-        </Providers>
-      </body>
+  <div className={inter.className}>
+    {children}
+  </div>
+</body>
     </html>
   );
 }
