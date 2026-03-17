@@ -28,7 +28,9 @@ export async function GET(req: Request) {
 
     const headers = rows[0] || []
 
-    const tokenIndex = headers.indexOf("Token")
+    const tokenIndex = headers.findIndex((h: string) =>
+  h.toString().trim().toLowerCase().includes("token")
+)
 
     let match = null
 
