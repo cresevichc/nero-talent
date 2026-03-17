@@ -6,7 +6,7 @@ export async function GET(req: Request) {
   try {
 
     const { searchParams } = new URL(req.url)
-    const token = searchParams.get("token") || ""
+    const token = (searchParams.get("token") || "").trim()
 
     const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT || "{}")
 
@@ -26,16 +26,20 @@ export async function GET(req: Request) {
 
     const rows = read.data.values || []
 
+    const headers = rows[0] || []
+
+    const tokenIndex = headers.indexOf("Token")
+
     let match = null
 
     for (let i = 1; i < rows.length; i++) {
-  const cell = (rows[i][10] || "").toString().trim()
+      const cell = (rows[i][tokenIndex] || "").toString().trim()
 
-  if (cell.includes(token.trim())) {
-    match = rows[i]
-    break
-  }
-}
+      if (cell === token) {
+        match = rows[i]
+        break
+      }
+    }
 
     if (!match) {
       return NextResponse.json({ success: false })
