@@ -11,13 +11,23 @@ export default async function ProposalPage({
   const token = params.cliente
 
   const sheetId = "14319GonzQ8GupZ6VdYxrDZSJW8ikrRdiv9o1Cp1NeYE"
+import { google } from "googleapis"
 
-const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/ACTIVE%20HIRING!A:Z?key=${process.env.GOOGLE_API_KEY}`
+const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT || "{}")
 
-const res = await fetch(url, { cache: "no-store" })
-const data = await res.json()
+const auth = new google.auth.GoogleAuth({
+  credentials: serviceAccount,
+  scopes: ["https://www.googleapis.com/auth/spreadsheets"]
+})
 
-const rows = data?.values || []
+const sheets = google.sheets({ version: "v4", auth })
+
+const read = await sheets.spreadsheets.values.get({
+  spreadsheetId: sheetId,
+  range: "ACTIVE HIRING!A:Z"
+})
+
+const rows = read.data.values || []
 
 if (!rows.length) {
   return (
@@ -26,7 +36,7 @@ if (!rows.length) {
     </div>
   )
 }
-console.log(data)
+
 const headers = (rows[0] || []).map((h:string) =>
   h.replace(/\n/g," ").replace(/\s+/g," ").trim()
 )
