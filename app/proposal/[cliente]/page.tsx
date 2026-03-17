@@ -17,7 +17,15 @@ const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/ACT
 const res = await fetch(url, { cache: "no-store" })
 const data = await res.json()
 
-const rows = data.values || []
+const rows = data?.values || []
+
+if (!rows.length) {
+  return (
+    <div style={{color:"white",padding:"40px"}}>
+      ERROR: No data from Google Sheets
+    </div>
+  )
+}
 console.log(data)
 const headers = (rows[0] || []).map((h:string) =>
   h.replace(/\n/g," ").replace(/\s+/g," ").trim()
