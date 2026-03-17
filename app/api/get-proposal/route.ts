@@ -25,6 +25,9 @@ export async function GET(req: Request) {
     })
 
     const rows = read.data.values || []
+    console.log("HEADERS REAL:", rows[0])
+    console.log("ROW 1:", rows[1])
+    console.log("ROW 2:", rows[2])
 
     const headers = rows[0] || []
 
