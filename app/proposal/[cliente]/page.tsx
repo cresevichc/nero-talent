@@ -36,7 +36,9 @@ const clients = records.map((row:any[]) => {
 console.log("TOKEN:", token)
 console.log("CLIENTS:", clients)
 const clienteData = clients.find(
-  (c: any) => (c["Token"] || "").trim() === (token || "").trim()
+  (c: any) => Object.values(c).some(
+  (v) => (v || "").toString().trim() === (token || "").trim()
+)
 )
 if (!clienteData) {
  return (
