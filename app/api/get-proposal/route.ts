@@ -29,11 +29,13 @@ export async function GET(req: Request) {
     let match = null
 
     for (let i = 1; i < rows.length; i++) {
-      if ((rows[i][10] || "").trim() === token.trim()) {
-        match = rows[i]
-        break
-      }
-    }
+  const cell = (rows[i][10] || "").toString().trim()
+
+  if (cell.includes(token.trim())) {
+    match = rows[i]
+    break
+  }
+}
 
     if (!match) {
       return NextResponse.json({ success: false })
