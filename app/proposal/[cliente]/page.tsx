@@ -31,8 +31,8 @@ const clients = records.map((row:any[]) => {
   })
   return obj
 })
-const clienteData = records.find(
-  (row:any[]) => (row[9] || "").trim() === (token || "").trim()
+const clienteData = clients.find(
+  (c: any) => (c["Token"] || "").trim() === (token || "").trim()
 )
 if (!clienteData) {
  return (
