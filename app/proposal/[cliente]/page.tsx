@@ -22,6 +22,7 @@ console.log(data)
 const headers = (rows[0] || []).map((h:string) =>
   h.replace(/\n/g," ").replace(/\s+/g," ").trim()
 )
+console.log("HEADERS:", headers)
 const records = rows.slice(1)
 
 const clients = records.map((row:any[]) => {
@@ -31,6 +32,9 @@ const clients = records.map((row:any[]) => {
   })
   return obj
 })
+
+console.log("TOKEN:", token)
+console.log("CLIENTS:", clients)
 const clienteData = clients.find(
   (c: any) => (c["Token"] || "").trim() === (token || "").trim()
 )
