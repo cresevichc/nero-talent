@@ -26,8 +26,14 @@ export async function GET(req: Request) {
 
     const rows = read.data.values || []
 
-    const match = rows.slice(1).find((row: any[]) => {
-  const cell = row[9] // columna del token
+    const headers = rows[0] || []
+
+const tokenIndex = headers.findIndex((h: string) =>
+  h.toLowerCase().includes("token")
+)
+
+const match = rows.slice(1).find((row: any[]) => {
+  const cell = row[tokenIndex]
   return (cell || "").toString().trim() === token.trim()
 })
 
