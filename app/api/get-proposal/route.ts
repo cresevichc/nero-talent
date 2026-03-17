@@ -27,8 +27,10 @@ export async function GET(req: Request) {
     const rows = read.data.values || []
 
     const match = rows.find((row: any[]) =>
-      row.some((cell) => (cell || "").toString().trim() === token.trim())
-    )
+  row.some((cell) =>
+    (cell || "").toString().trim().toLowerCase() === token.trim().toLowerCase()
+  )
+)
 
     if (!match) {
       return NextResponse.json({ success: false })
