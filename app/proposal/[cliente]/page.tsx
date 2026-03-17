@@ -8,7 +8,7 @@ export default async function ProposalPage({
 }) {
 
   const { cliente } = params
-  const token = searchParams?.token
+  const token = params.cliente
 
   const sheetId = "14319GonzQ8GupZ6VdYxrDZSJW8ikrRdiv9o1Cp1NeYE"
 
