@@ -9,9 +9,9 @@ export default async function ProposalPage({
   const token = params.cliente
 
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/get-proposal?token=${token}`,
-    { cache: "no-store" }
-  )
+  `https://nero-talent.vercel.app/api/get-proposal?token=${token}`,
+  { cache: "no-store" }
+)
 
   const clienteData = await res.json()
 
