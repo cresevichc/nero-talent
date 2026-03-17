@@ -26,11 +26,10 @@ export async function GET(req: Request) {
 
     const rows = read.data.values || []
 
-    const match = rows.find((row: any[]) =>
-  row.some((cell) =>
-    (cell || "").toString().trim().toLowerCase() === token.trim().toLowerCase()
-  )
-)
+    const match = rows.slice(1).find((row: any[]) => {
+  const cell = row[9] // columna del token
+  return (cell || "").toString().trim() === token.trim()
+})
 
     if (!match) {
       return NextResponse.json({ success: false })
