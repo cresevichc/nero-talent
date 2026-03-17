@@ -29,7 +29,7 @@ export async function GET(req: Request) {
     let match = null
 
     for (let i = 1; i < rows.length; i++) {
-      if ((rows[i][9] || "").trim() === token.trim()) {
+      if ((rows[i][10] || "").trim() === token.trim()) {
         match = rows[i]
         break
       }
