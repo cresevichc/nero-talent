@@ -1,5 +1,5 @@
 import './globals.css';
-import { Playfair_Display, Inter } from 'next/font/google';
+import { Playfair_Display} from 'next/font/google';
 export const metadata = {
   title: "NERO Talent | Technology Talent Advisory for Startups and Scale-ups",
   description:
@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
-const inter = Inter({
+const inter = undefined;
   subsets: ['latin'],
   weight: ['400', '500'],
   display: 'swap',
@@ -45,7 +45,7 @@ export default function RootLayout({
     })
   }}
 />  
-  <div className={inter.className}>
+  <div>
     {children}
   </div>
 </body>
