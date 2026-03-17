@@ -52,14 +52,6 @@ if (!clienteData) {
   </div>
 )
 }
-if (!token || (clienteData[9] || "").trim() !== token.trim()) {
-  return (
-    <div style={{textAlign:"center",marginTop:"100px"}}>
-      <h1>Access denied</h1>
-      <p>Invalid proposal token.</p>
-    </div>
-  )
-}
 
   return (
   <div style={{ background: "#000", minHeight: "100vh" }}>
