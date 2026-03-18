@@ -54,21 +54,7 @@ export default function ConfirmButton({ token }) {
 
     setConfirmed(true)
 
-    setTimeout(() => {
-
-  // eliminar firma añadida
-  const firma = document.getElementById("firma-cliente")
-  if (firma) firma.remove()
-
-  // reset inputs
-  setNome("")
-  setRuolo("")
-
-  // reset botón
-  setConfirmed(false)
-
-}, 4000)
-
+    
   }
 
   setConfirming(false)
