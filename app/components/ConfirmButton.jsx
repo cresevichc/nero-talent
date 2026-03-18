@@ -12,126 +12,133 @@ export default function ConfirmButton({ token }) {
 
   async function confirmEngagement() {
 
-    const oggi = new Date()
-    const dataFirma = oggi.toLocaleDateString("it-IT")
+  const oggi = new Date()
+  const dataFirma = oggi.toLocaleDateString("it-IT")
 
-    setConfirming(true)
+  setConfirming(true)
 
-    const res = await fetch("/api/accept-proposal", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        token,
-        nome,
-        ruolo
-      })
+  const res = await fetch("/api/accept-proposal", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      token,
+      nome,
+      ruolo
     })
+  })
 
-    let data = { success: false }
+  let data = { success: false }
 
-    try {
-      data = await res.json()
-    } catch (e) {}
+  try {
+    data = await res.json()
+  } catch (e) {}
 
-    if (data.success) {
+  if (data.success) {
 
-      const firmaDiv = document.createElement("div")
+    const firmaDiv = document.createElement("div")
+    firmaDiv.id = "firma-cliente"
 
-      firmaDiv.innerHTML = `
-        <div style="margin-top:40px;text-align:left">
-          <p>Nome: ${nome}</p>
-          <p>Ruolo: ${ruolo}</p>
-          <p>Data: ${dataFirma}</p>
-        </div>
-      `
+    firmaDiv.innerHTML = `
+      <div style="margin-top:40px;text-align:left">
+        <p>Nome: ${nome}</p>
+        <p>Ruolo: ${ruolo}</p>
+        <p>Data: ${dataFirma}</p>
+      </div>
+    `
 
-      const doc = document.getElementById("proposal-document")
-      if (doc) doc.appendChild(firmaDiv)
+    const doc = document.getElementById("proposal-document")
+    if (doc) doc.appendChild(firmaDiv)
+
+
+    setConfirmed(true)
 
     setTimeout(() => {
-  const element = document.getElementById("proposal-document")
-  if (element && typeof window !== "undefined") {
-    import("html2pdf.js").then((html2pdf) => {
-      html2pdf.default().from(element).save()
-    })  
+
+  // eliminar firma añadida
+  const firma = document.getElementById("firma-cliente")
+  if (firma) firma.remove()
+
+  // reset inputs
+  setNome("")
+  setRuolo("")
+
+  // reset botón
+  setConfirmed(false)
+
+}, 4000)
+
   }
-}, 500)
 
-      setConfirmed(true)
-      setNome("")
-      setRuolo("")
-    }
-
-    setConfirming(false)
-    }
-    return (
-  <div style={{ marginTop: "40px", textAlign: "center" }}>
-
-    <div style={{ maxWidth: "400px", margin: "0 auto" }}>
-
-      <input
-        placeholder="Nome e Cognome"
-        value={nome}
-        onChange={(e) => setNome(e.target.value)}
-        style={{
-  width: "100%",
-  padding: "12px",
-  marginBottom: "12px",
-  background: "#111",
-  border: "1px solid rgba(255,255,255,0.15)",
-  color: "#fff"
-}}
-      />
-
-      <input
-        placeholder="Ruolo"
-        value={ruolo}
-        onChange={(e) => setRuolo(e.target.value)}
-        style={{
-  width: "100%",
-  padding: "12px",
-  marginBottom: "12px",
-  background: "#111",
-  border: "1px solid rgba(255,255,255,0.15)",
-  color: "#fff"
-}}
-      />
-
-      <button
-        onClick={confirmEngagement}
-        disabled={confirming}
-        style={{
-  padding: "12px 28px",
-  background: confirmed
-    ? "linear-gradient(135deg, #00ff9c, #00c97a)"
-    : confirming
-    ? "#222"
-    : "#fff",
-  color: confirmed ? "#003322" : confirming ? "#888" : "#000",
-  border: "none",
-  borderRadius: "999px",
-  cursor: confirming || confirmed ? "default" : "pointer",
-  marginTop: "15px",
-  transition: "all 0.3s ease",
-  fontWeight: "500",
-  boxShadow: confirmed
-    ? "0 0 12px rgba(0,255,156,0.6)"
-    : "none",
-  opacity: confirming ? 0.7 : 1
-}}
-      >
-        {confirming 
-  ? "Conferma in corso..." 
-  : confirmed 
-    ? "✔ Collaborazione confermata" 
-    : "Conferma collaborazione"}
-      </button>
-
-    </div>
-
-  </div>
-)
-
+  setConfirming(false)
 }
+        return (
+        <div style={{ marginTop: "40px", textAlign: "center" }}>
+
+          <div style={{ maxWidth: "400px", margin: "0 auto" }}>
+
+            <input
+              placeholder="Nome e Cognome"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+              style={{
+                width: "100%",
+                padding: "12px",
+                marginBottom: "12px",
+                background: "#111",
+                border: "1px solid rgba(255,255,255,0.15)",
+                color: "#fff"
+              }}
+            />
+
+            <input
+              placeholder="Ruolo"
+              value={ruolo}
+              onChange={(e) => setRuolo(e.target.value)}
+              style={{
+                width: "100%",
+                padding: "12px",
+                marginBottom: "12px",
+                background: "#111",
+                border: "1px solid rgba(255,255,255,0.15)",
+                color: "#fff"
+              }}
+            />
+
+            <button
+              onClick={confirmEngagement}
+              disabled={confirming}
+              style={{
+                padding: "12px 28px",
+                background: confirmed
+                  ? "linear-gradient(135deg, #00ff9c, #00c97a)"
+                  : confirming
+                    ? "#222"
+                    : "#fff",
+                color: confirmed ? "#003322" : confirming ? "#888" : "#000",
+                border: "none",
+                borderRadius: "999px",
+                cursor: confirming || confirmed ? "default" : "pointer",
+                marginTop: "15px",
+                transition: "all 0.3s ease",
+                fontWeight: "500",
+                boxShadow: confirmed
+                  ? "0 0 12px rgba(0,255,156,0.6)"
+                  : "none",
+                opacity: confirming ? 0.7 : 1
+              }}
+            >
+              {confirming
+                ? "Conferma in corso..."
+                : confirmed
+                  ? "✔ Collaborazione confermata"
+                  : "Conferma collaborazione"}
+            </button>
+
+          </div>
+
+        </div>
+      )
+
+    }

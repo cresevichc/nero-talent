@@ -1,16 +1,14 @@
 import { google } from "googleapis"
 import { NextResponse } from "next/server"
 
+
 export async function POST(req: Request) {
 
   try {
 
     const body = await req.json()
     const { token } = body
-    
-
     const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT || "{}")
-
     const auth = new google.auth.GoogleAuth({
       credentials: serviceAccount,
       scopes: ["https://www.googleapis.com/auth/spreadsheets"]
@@ -27,19 +25,26 @@ export async function POST(req: Request) {
 
     const rows = read.data.values || []
 
+    const headers = rows[0] || []
+
+    const tokenIndex = headers.findIndex((h: string) =>
+      h.toString().trim().toLowerCase().includes("token")
+    )
+
+    let match = null
     let rowIndex = -1
 
     for (let i = 1; i < rows.length; i++) {
+      const cell = (rows[i][tokenIndex] || "").toString().trim()
 
+      if (cell === token.trim()) {
+        match = rows[i]
+        rowIndex = i + 1
+        break
+      }
+    }
 
-
-  if ((rows[i][9] || "").trim() === token.trim()) {
-    rowIndex = i + 1
-    break
-  }
-}
-
-    if (rowIndex === -1) {
+    if (!match || rowIndex === -1) {
       return NextResponse.json({ success: false })
     }
 
@@ -52,7 +57,10 @@ export async function POST(req: Request) {
       }
     })
 
-    return NextResponse.json({ success: true })
+    return NextResponse.json({
+      success: true,
+      nome: match[0] || ""
+    })
 
   } catch (error) {
 
