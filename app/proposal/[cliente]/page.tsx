@@ -67,30 +67,69 @@ export default function ProposalPage({
         }}>
 
           <p>
-            La presente ha lo scopo di formalizzare la proposta di collaborazione di NERO Talent
-            per l’attività di ricerca e selezione.
-          </p>
+La presente ha lo scopo di formalizzare la proposta di collaborazione di NERO Talent
+per l’attività di ricerca e selezione.
+</p>
 
-          <h3 style={{ marginTop: "30px" }}>Ambito del Servizio</h3>
+<h3 style={{marginTop:"30px"}}>Ambito del Servizio</h3>
 
-          <p>
-            NERO Talent supporta le aziende tecnologiche nell’identificazione,
-            valutazione e presentazione di candidati qualificati per ruoli strategici.
-          </p>
+<p>
+NERO Talent supporta le aziende tecnologiche nell’identificazione, valutazione e
+presentazione di candidati qualificati per ruoli strategici.
+</p>
 
-          <p>L’attività comprende:</p>
+<p>L’attività comprende:</p>
 
-          <p>
-            – definizione e allineamento del profilo ricercato<br/>
-            – identificazione e valutazione dei candidati<br/>
-            – presentazione di una shortlist qualificata<br/>
-            – supporto durante l’intero processo di selezione fino alla chiusura
-          </p>
+<p>
+– definizione e allineamento del profilo ricercato<br/>
+– identificazione e valutazione dei candidati<br/>
+– presentazione di una shortlist qualificata<br/>
+– supporto durante l’intero processo di selezione fino alla chiusura
+</p>
 
-          <p style={{ marginTop: "20px" }}>
-            Durante il processo, il Cliente avrà inoltre accesso a un <b>NERO Client Portal</b>
-            dedicato.
-          </p>
+<p style={{marginTop:"20px"}}>
+Durante il processo, il Cliente avrà inoltre accesso a un <b>NERO Client Portal</b>
+dedicato, attraverso il quale sarà possibile monitorare lo stato della ricerca,
+visualizzare i candidati presentati e seguire l’evoluzione del processo in tempo reale.
+</p>
+
+<h3 style={{marginTop:"30px"}}>Compenso</h3>
+
+<p>
+Il compenso per l’attività di ricerca e selezione è pari al <b>20% della RAL</b>.
+</p>
+
+<p>
+In caso di pagamento entro <b>7 giorni</b>, il compenso sarà pari al <b>17% della RAL</b>.
+</p>
+
+<h3 style={{marginTop:"30px"}}>Garanzia</h3>
+
+<p>
+NERO Talent offre una <b>garanzia di sostituzione di 90 giorni</b>.
+</p>
+
+<p>
+Qualora il rapporto si interrompa, la ricerca verrà riattivata senza costi aggiuntivi.
+</p>
+
+<h3 style={{marginTop:"30px"}}>Tutela della Presentazione</h3>
+
+<p>
+Se il candidato viene assunto entro <b>12 mesi</b>, il compenso sarà comunque dovuto.
+</p>
+
+<h3 style={{marginTop:"30px"}}>Validità della Proposta</h3>
+
+<p>
+La proposta ha validità di <b>30 giorni</b>.
+</p>
+
+<h3 style={{marginTop:"30px"}}>Chiusura</h3>
+
+<p>
+Le condizioni complete saranno regolate dal contratto di incarico.
+</p>
 
         </div>
 
