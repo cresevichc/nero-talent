@@ -29,6 +29,8 @@ export default function ConfirmButton({ token }) {
     })
   })
 
+  console.log("STATUS:", res.status)
+
   let data = { success: false }
 
   try {
