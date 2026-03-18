@@ -132,7 +132,7 @@ export default function ProposalPage({
           <p>Founder</p>
         </div>
 
-        <ConfirmButton token={token} />
+        <ConfirmButton token={token} key={token} />
 
       </div>
     </div>
