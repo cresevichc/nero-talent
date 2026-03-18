@@ -18,18 +18,20 @@ export default function ProposalPage({
     <div style={{ background: "#000", minHeight: "100vh", padding: "40px 0" }}>
 
       <div
-        id="proposal-document"
-        style={{
-          maxWidth: "900px",
-          margin: "0 auto",
-          padding: "60px 40px",
-          textAlign: "center",
-          background: "#000",
-          color: "#fff",
-          border: "1px solid rgba(255,255,255,0.12)",
-          borderRadius: "12px"
-        }}
-      >
+  id="proposal-document"
+  style={{
+    maxWidth: "900px",
+    margin: "0 auto",
+    padding: "60px 40px",
+    textAlign: "center",
+    background: "#000",
+    color: "#fff",
+    border: "1px solid rgba(255,255,255,0.12)",
+    borderRadius: "12px",
+    position: "relative",
+    zIndex: 10
+  }}
+>
 
         <h1 className="nero-title" style={{
           fontSize: "40px",
