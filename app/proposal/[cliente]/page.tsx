@@ -136,13 +136,14 @@ export default function ProposalPage({
         </div>
 
         <div style={{ marginTop: "40px", textAlign: "left" }}>
-          <p style={{ opacity: 0.7 }}>NERO Talent</p>
-          <p>Cristian Cresevich</p>
-          <p>Founder</p>
-          </div>
-        <div style={{ position: "relative", zIndex: 9999 }}>
-        <ConfirmButton token={token} />
-        </div>
-    </div>
-  )
-}
+  <p style={{ opacity: 0.7 }}>NERO Talent</p>
+  <p>Cristian Cresevich</p>
+  <p>Founder</p>
+</div>
+
+<div style={{ position: "relative", zIndex: 9999 }}>
+  <ConfirmButton token={token} />
+</div>
+
+</div> {/* cierre proposal-document */}
+</div> {/* cierre wrapper principal */}
