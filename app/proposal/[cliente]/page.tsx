@@ -1,3 +1,4 @@
+'use client'
 import ConfirmButton from "@/app/components/ConfirmButton"
 
 export default function ProposalPage({
