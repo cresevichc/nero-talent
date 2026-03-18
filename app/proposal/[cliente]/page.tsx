@@ -139,11 +139,12 @@ Le condizioni complete saranno regolate dal contratto di incarico.
           <p>Founder</p>
         </div>
 
-        <div style={{ marginTop: "40px" }}>
-          <ConfirmButton token={token} />
-        </div>
+        </div> {/* cierre proposal-document */}
 
-      </div>
-    </div>
+<div style={{ textAlign: "center", marginTop: "40px" }}>
+  <ConfirmButton token={token} />
+</div>
+
+</div> {/* cierre fondo negro */}
   )
 }
