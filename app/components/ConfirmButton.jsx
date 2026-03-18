@@ -93,15 +93,9 @@ export default function ConfirmButton({ token }) {
             />
 
             <button
-  id="confirm-btn"
-  style={{
-    padding: "12px 28px",
-    background: "#fff",
-    color: "#000",
-    border: "none",
-    borderRadius: "999px",
-    cursor: "pointer",
-    marginTop: "15px"
+  onClick={() => {
+    console.log("CLICK FUNCIONA")
+    confirmEngagement()
   }}
 >
   Conferma collaborazione
