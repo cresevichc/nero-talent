@@ -107,34 +107,18 @@ export default function ConfirmButton({ token }) {
             />
 
             <button
-              onClick={confirmEngagement}
-              disabled={confirming}
-              style={{
-                padding: "12px 28px",
-                background: confirmed
-                  ? "linear-gradient(135deg, #00ff9c, #00c97a)"
-                  : confirming
-                    ? "#222"
-                    : "#fff",
-                color: confirmed ? "#003322" : confirming ? "#888" : "#000",
-                border: "none",
-                borderRadius: "999px",
-                cursor: confirming || confirmed ? "default" : "pointer",
-                marginTop: "15px",
-                transition: "all 0.3s ease",
-                fontWeight: "500",
-                boxShadow: confirmed
-                  ? "0 0 12px rgba(0,255,156,0.6)"
-                  : "none",
-                opacity: confirming ? 0.7 : 1
-              }}
-            >
-              {confirming
-                ? "Conferma in corso..."
-                : confirmed
-                  ? "✔ Collaborazione confermata"
-                  : "Conferma collaborazione"}
-            </button>
+  onClick={() => alert("CLICK FUNCIONA")}
+  style={{
+    padding: "20px",
+    background: "red",
+    color: "white",
+    fontSize: "18px",
+    zIndex: 9999,
+    position: "relative"
+  }}
+>
+  TEST CLICK
+</button>
 
           </div>
 
