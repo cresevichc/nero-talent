@@ -27,9 +27,7 @@ export async function POST(req: Request) {
 
     const headers = rows[0] || []
 
-    const tokenIndex = headers.findIndex((h: string) =>
-      h.toString().trim().toLowerCase().includes("token")
-    )
+    const tokenIndex = 9
 
     let match = null
     let rowIndex = -1
@@ -37,7 +35,7 @@ export async function POST(req: Request) {
     for (let i = 1; i < rows.length; i++) {
       const cell = (rows[i][tokenIndex] || "").toString().trim()
 
-      if (cell === token.trim()) {
+      if (cell.includes(token.trim())) {
         match = rows[i]
         rowIndex = i + 1
         break
