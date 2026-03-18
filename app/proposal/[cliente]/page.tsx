@@ -137,14 +137,13 @@ Le condizioni complete saranno regolate dal contratto di incarico.
           <p style={{ opacity: 0.7 }}>NERO Talent</p>
           <p>Cristian Cresevich</p>
           <p>Founder</p>
-        </div>
+                </div> {/* cierre proposal-document */}
+      </div>
 
-        </div> {/* cierre proposal-document */}
+      <div style={{ textAlign: "center", marginTop: "40px" }}>
+        <ConfirmButton token={token} />
+      </div>
 
-<div style={{ textAlign: "center", marginTop: "40px" }}>
-  <ConfirmButton token={token} />
-</div>
-
-</div> {/* cierre fondo negro */}
+    </div>
   )
 }
