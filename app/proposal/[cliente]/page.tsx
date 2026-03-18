@@ -1,5 +1,10 @@
 'use client'
-import ConfirmButton from "@/app/components/ConfirmButton"
+import dynamic from "next/dynamic"
+
+const ConfirmButton = dynamic(
+  () => import("@/app/components/ConfirmButton"),
+  { ssr: false }
+)
 
 export default function ProposalPage({
   params
