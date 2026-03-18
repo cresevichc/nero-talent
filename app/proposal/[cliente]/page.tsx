@@ -139,6 +139,7 @@ export default function ProposalPage({
           <p style={{ opacity: 0.7 }}>NERO Talent</p>
           <p>Cristian Cresevich</p>
           <p>Founder</p>
+          </div>
         <div style={{ position: "relative", zIndex: 9999 }}>
         <ConfirmButton token={token} />
         </div>
