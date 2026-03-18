@@ -93,7 +93,7 @@ export default function ConfirmButton({ token }) {
             />
 
             <button
-  onClick={confirmEngagement}
+  id="confirm-btn"
   style={{
     padding: "12px 28px",
     background: "#fff",
@@ -101,12 +101,43 @@ export default function ConfirmButton({ token }) {
     border: "none",
     borderRadius: "999px",
     cursor: "pointer",
-    marginTop: "15px",
-    fontWeight: "500"
+    marginTop: "15px"
   }}
 >
   Conferma collaborazione
 </button>
+<script
+  dangerouslySetInnerHTML={{
+    __html: `
+      document.addEventListener("click", async function(e) {
+        if (e.target && e.target.id === "confirm-btn") {
+
+          const nome = document.querySelector('input[placeholder="Nome e Cognome"]').value
+          const ruolo = document.querySelector('input[placeholder="Ruolo"]').value
+
+          const res = await fetch("/api/accept-proposal", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              token: "${token}",
+              nome,
+              ruolo
+            })
+          })
+
+          const data = await res.json()
+
+          if (data.success) {
+            alert("Collaborazione confermata")
+            location.reload()
+          } else {
+            alert("Errore")
+          }
+        }
+      })
+    `
+  }}
+/>
 
           </div>
 
