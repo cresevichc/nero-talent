@@ -1,4 +1,5 @@
 'use client'
+
 import dynamic from "next/dynamic"
 
 const ConfirmButton = dynamic(
@@ -18,28 +19,27 @@ export default function ProposalPage({
     <div style={{ background: "#000", minHeight: "100vh", padding: "40px 0" }}>
 
       <div
-  id="proposal-document"
-  style={{
-    maxWidth: "900px",
-    margin: "0 auto",
-    padding: "60px 40px",
-    textAlign: "center",
-    background: "#000",
-    color: "#fff",
-    border: "1px solid rgba(255,255,255,0.12)",
-    borderRadius: "12px",
-    pointerEvents: "auto",
-    position: "relative",
-    zIndex: 10
-  }}
->
+        id="proposal-document"
+        style={{
+          maxWidth: "900px",
+          margin: "0 auto",
+          padding: "60px 40px",
+          textAlign: "center",
+          background: "#000",
+          color: "#fff",
+          border: "1px solid rgba(255,255,255,0.12)",
+          borderRadius: "12px",
+          position: "relative",
+          zIndex: 10
+        }}
+      >
 
-        <h1 className="nero-title" style={{
+        <h1 style={{
           fontSize: "40px",
           fontWeight: 500,
           letterSpacing: "0.04em",
           marginBottom: "6px",
-          fontFamily: '"Playfair Display", serif',
+          fontFamily: '"Playfair Display", serif'
         }}>
           NERO TALENT
         </h1>
@@ -53,7 +53,6 @@ export default function ProposalPage({
           SEARCH ENGAGEMENT
         </p>
 
-        {/* 🔴 NOMBRE CLIENTE (mañana lo conectamos bien) */}
         <p style={{ fontSize: "20px", marginBottom: "40px" }}>
           Cliente
         </p>
@@ -90,60 +89,22 @@ export default function ProposalPage({
 
           <p style={{ marginTop: "20px" }}>
             Durante il processo, il Cliente avrà inoltre accesso a un <b>NERO Client Portal</b>
-            dedicato, attraverso il quale sarà possibile monitorare lo stato della ricerca,
-            visualizzare i candidati presentati e seguire l’evoluzione del processo in tempo reale.
-          </p>
-
-          <h3 style={{ marginTop: "30px" }}>Compenso</h3>
-
-          <p>
-            Il compenso per l’attività di ricerca e selezione è pari al <b>20% della Retribuzione
-            Annua Lorda (RAL)</b>.
-          </p>
-
-          <p>
-            In caso di pagamento entro <b>7 giorni</b>, il compenso sarà pari al <b>17% della RAL</b>.
-          </p>
-
-          <h3 style={{ marginTop: "30px" }}>Garanzia</h3>
-
-          <p>
-            NERO Talent offre una <b>garanzia di sostituzione di 90 giorni</b>.
-          </p>
-
-          <p>
-            Qualora il rapporto si interrompa, la ricerca verrà riattivata senza costi aggiuntivi.
-          </p>
-
-          <h3 style={{ marginTop: "30px" }}>Tutela della Presentazione</h3>
-
-          <p>
-            Se il candidato viene assunto entro <b>12 mesi</b>, il compenso sarà comunque dovuto.
-          </p>
-
-          <h3 style={{ marginTop: "30px" }}>Validità della Proposta</h3>
-
-          <p>
-            La proposta ha validità di <b>30 giorni</b>.
-          </p>
-
-          <h3 style={{ marginTop: "30px" }}>Chiusura</h3>
-
-          <p>
-            Le condizioni complete saranno regolate dal contratto di incarico.
+            dedicato.
           </p>
 
         </div>
 
         <div style={{ marginTop: "40px", textAlign: "left" }}>
-  <p style={{ opacity: 0.7 }}>NERO Talent</p>
-  <p>Cristian Cresevich</p>
-  <p>Founder</p>
-</div>
+          <p style={{ opacity: 0.7 }}>NERO Talent</p>
+          <p>Cristian Cresevich</p>
+          <p>Founder</p>
+        </div>
 
-<div style={{ position: "relative", zIndex: 9999 }}>
-  <ConfirmButton token={token} />
-</div>
+        <div style={{ marginTop: "40px" }}>
+          <ConfirmButton token={token} />
+        </div>
 
-</div> {/* cierre proposal-document */}
-</div> {/* cierre wrapper principal */}
+      </div>
+    </div>
+  )
+}
