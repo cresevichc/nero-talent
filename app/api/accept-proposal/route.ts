@@ -8,6 +8,7 @@ export async function POST(req: Request) {
 
     const body = await req.json()
     const { token } = body
+    console.log("TOKEN RECIBIDO:", token)
     const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT || "{}")
     const auth = new google.auth.GoogleAuth({
       credentials: serviceAccount,
