@@ -107,17 +107,19 @@ export default function ConfirmButton({ token }) {
             />
 
             <button
-  onClick={() => alert("CLICK FUNCIONA")}
+  onClick={confirmEngagement}
   style={{
-    padding: "20px",
-    background: "red",
-    color: "white",
-    fontSize: "18px",
-    zIndex: 9999,
-    position: "relative"
+    padding: "12px 28px",
+    background: "#fff",
+    color: "#000",
+    border: "none",
+    borderRadius: "999px",
+    cursor: "pointer",
+    marginTop: "15px",
+    fontWeight: "500"
   }}
 >
-  TEST CLICK
+  Conferma collaborazione
 </button>
 
           </div>
