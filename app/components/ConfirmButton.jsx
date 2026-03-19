@@ -9,6 +9,7 @@ export default function ConfirmButton({ token }) {
 
   const [nome, setNome] = useState("")
   const [ruolo, setRuolo] = useState("")
+  const [cliente, setCliente] = useState("")
 
   async function confirmEngagement() {
 
@@ -38,6 +39,7 @@ export default function ConfirmButton({ token }) {
   } catch (e) {}
 
   if (data.success) {
+    setCliente(data.nome)
 
     const firmaDiv = document.createElement("div")
     firmaDiv.id = "firma-cliente"

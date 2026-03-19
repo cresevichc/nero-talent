@@ -1,6 +1,7 @@
 'use client'
 import { useSearchParams } from "next/navigation"
 import dynamic from "next/dynamic"
+import { useEffect, useState } from "react"
 
 const ConfirmButton = dynamic(
   () => import("@/app/components/ConfirmButton"),
@@ -17,6 +18,25 @@ export default function ProposalPage({
 
 const searchParams = useSearchParams()
 const token = searchParams.get("cliente") || params.cliente
+const [cliente, setCliente] = useState("")
+useEffect(() => {
+  async function fetchCliente() {
+    try {
+      const res = await fetch(`/api/get-proposal?token=${token}`)
+      const data = await res.json()
+
+      if (data.success) {
+        setCliente(data.nome)
+      }
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  if (token) {
+    fetchCliente()
+  }
+}, [token])
 
   return (
     <div style={{ background: "#000", minHeight: "100vh", padding: "40px 0" }}>
@@ -57,7 +77,7 @@ const token = searchParams.get("cliente") || params.cliente
         </p>
 
         <p style={{ fontSize: "20px", marginBottom: "40px" }}>
-          Cliente
+         {cliente || "Cliente"}
         </p>
 
         <div style={{
