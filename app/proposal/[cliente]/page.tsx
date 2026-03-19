@@ -210,7 +210,7 @@ export default function ProposalPage({
 
     <div id="client-signature" style={{ marginTop: "10px" }} />
   </div>
-
+</div>
 </div> {/* cierre proposal-document */}
 
 
