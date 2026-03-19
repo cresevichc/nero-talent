@@ -33,14 +33,18 @@ const token = (tokenFromQuery || tokenFromPath || "").trim()
 
     const rows = read.data.values || []
 
-    const tokenIndex = 9
+    const headers = rows[0] || []
+
+const tokenIndex = headers.findIndex((h: string) =>
+  h && h.toString().trim().toLowerCase() === "token"
+)
 
     let match = null
 
     for (let i = 1; i < rows.length; i++) {
       const cell = (rows[i][tokenIndex] || "").toString().trim()
 
-      if (cell.includes(token)) {
+      if (cell.toString().trim() === token.trim()) {
         match = rows[i]
         break
       }
