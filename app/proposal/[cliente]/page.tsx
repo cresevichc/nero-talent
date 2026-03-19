@@ -240,8 +240,8 @@ Le condizioni complete saranno regolate dal contratto di incarico.
     Founder
   </p>
 </div>
-                </div> {/* cierre proposal-document */}
-      </div>
+       </div> {/* cierre proposal-document */}
+      
 
       <div style={{ textAlign: "center", marginTop: "40px" }}>
         <ConfirmButton token={token} />
