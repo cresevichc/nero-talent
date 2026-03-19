@@ -211,7 +211,7 @@ export default function ProposalPage({
     <div id="client-signature" style={{ marginTop: "10px" }} />
   </div>
 
-</div>/* cierre proposal-document */}
+</div> {/* cierre proposal-document */}
 
 
       <div style={{ textAlign: "center", marginTop: "40px" }}>
