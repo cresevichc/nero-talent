@@ -186,18 +186,28 @@ export default function ProposalPage({
         {/* FIRMA */}
         <div style={{
           display: "flex",
-          justifyContent: "space-between",
+          gap: "80px",
           marginTop: "60px"
         }}>
 
           <div>
-            <p style={{ fontSize: "12px", opacity: 0.6 }}>NERO TALENT</p>
+            <p
+              className={playfair.className}
+              style={{
+                fontSize: "16px",
+                fontWeight: 600,
+                letterSpacing: "0.04em",
+                marginBottom: "6px"
+              }}
+            >
+              NERO TALENT
+            </p>
             <p>Cristian Cresevich</p>
             <p style={{ fontSize: "13px", opacity: 0.7 }}>Founder</p>
           </div>
 
-          <div style={{ textAlign: "right" }}>
-            <p style={{ fontSize: "12px", opacity: 0.6 }}>CLIENTE</p>
+          <div style={{ textAlign: "left" }}>
+
             <p>{cliente || "__________"}</p>
 
             <div id="client-signature" />
