@@ -8,7 +8,7 @@ export async function POST(req: Request) {
 
     const body = await req.json()
     const { token } = body
-    console.log("TOKEN RECIBIDO:", token)
+    console.log("TOKEN FRONT:", token)
     const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT || "{}")
     const auth = new google.auth.GoogleAuth({
       credentials: serviceAccount,
@@ -35,6 +35,7 @@ export async function POST(req: Request) {
 
     for (let i = 1; i < rows.length; i++) {
       const cell = (rows[i][tokenIndex] || "").toString().trim()
+      console.log("TOKEN SHEET:", cell)
 
       if (cell.trim() === token.trim()) {
         match = rows[i]
