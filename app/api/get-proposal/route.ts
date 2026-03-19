@@ -32,6 +32,7 @@ const token = (tokenFromQuery || tokenFromPath || "").trim()
     })
 
     const rows = read.data.values || []
+    console.log("ROWS:", JSON.stringify(rows))
 
     const headers = rows[0] || []
 
