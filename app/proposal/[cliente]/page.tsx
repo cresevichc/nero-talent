@@ -70,7 +70,7 @@ export default function ProposalPage({
           <h1
             className={playfair.className}
             style={{
-              fontSize: "40px",
+              fontSize: "42px",
               fontWeight: 500,
               letterSpacing: "0.04em",
               marginBottom: "6px"
