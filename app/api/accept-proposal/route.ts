@@ -36,7 +36,7 @@ export async function POST(req: Request) {
     for (let i = 1; i < rows.length; i++) {
       const cell = (rows[i][tokenIndex] || "").toString().trim()
 
-      if (cell.includes(token.trim())) {
+      if (cell.trim() === token.trim()) {
         match = rows[i]
         rowIndex = i + 1
         break
