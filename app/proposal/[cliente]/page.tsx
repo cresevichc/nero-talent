@@ -1,5 +1,5 @@
 'use client'
-
+import { useSearchParams } from "next/navigation"
 import dynamic from "next/dynamic"
 
 const ConfirmButton = dynamic(
@@ -13,7 +13,10 @@ export default function ProposalPage({
   params: { cliente: string }
 }) {
 
-  const token = params.cliente
+  
+
+const searchParams = useSearchParams()
+const token = searchParams.get("cliente") || params.cliente
 
   return (
     <div style={{ background: "#000", minHeight: "100vh", padding: "40px 0" }}>
