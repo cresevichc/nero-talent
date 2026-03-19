@@ -2,6 +2,12 @@
 import { useSearchParams } from "next/navigation"
 import dynamic from "next/dynamic"
 import { useEffect, useState } from "react"
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500"]
+});
 
 const ConfirmButton = dynamic(
   () => import("@/app/components/ConfirmButton"),
@@ -61,12 +67,15 @@ export default function ProposalPage({
 
         {/* HEADER */}
         <div style={{ textAlign: "center", marginBottom: "50px" }}>
-          <h1 style={{
-            fontSize: "42px",
-            fontWeight: 400,
-            letterSpacing: "0.12em",
-            marginBottom: "10px"
-          }}>
+          <h1
+            className={playfair.className}
+            style={{
+              fontSize: "40px",
+              fontWeight: 500,
+              letterSpacing: "0.04em",
+              marginBottom: "6px"
+            }}
+          >
             NERO TALENT
           </h1>
 
@@ -75,17 +84,20 @@ export default function ProposalPage({
             letterSpacing: "0.28em",
             textTransform: "uppercase",
             opacity: 0.6,
-            marginBottom: "35px"
+            marginBottom: "30px"
           }}>
             SEARCH ENGAGEMENT
           </p>
 
-          <p style={{
-            fontSize: "18px",
-            fontWeight: 400,
-            letterSpacing: "0.04em",
-            opacity: 0.85
-          }}>
+          <p
+            className={playfair.className}
+            style={{
+              fontSize: "22px",
+              fontWeight: 500,
+              letterSpacing: "0.02em",
+              marginTop: "10px"
+            }}
+          >
             {cliente}
           </p>
         </div>
