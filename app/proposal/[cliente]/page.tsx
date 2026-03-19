@@ -45,7 +45,7 @@ export default function ProposalPage({
 
   return (
     <div style={{ background: "#000", minHeight: "100vh", padding: "40px 0" }}>
-
+      <div id="proposal-document">
       <div style={{
   textAlign: "left",
   maxWidth: "640px",
