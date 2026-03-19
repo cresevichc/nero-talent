@@ -8,11 +8,6 @@ export async function POST(req: Request) {
 const body = await req.json()
 const token = (body.token || "").trim()
 
-// fallback: coger token desde la URL (/proposal/[cliente])
-const pathParts = url.pathname.split("/")
-const tokenFromPath = pathParts[pathParts.length - 1]
-
-const token = (tokenFromQuery || tokenFromPath || "").trim()
 
     const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT || "{}")
 
