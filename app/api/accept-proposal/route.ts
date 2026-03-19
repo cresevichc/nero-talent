@@ -27,7 +27,8 @@ export async function POST(req: Request) {
     const rows = read.data.values || []
 
     const headers = rows[0] || []
-
+    console.log("ROWS LENGTH:", rows.length)
+ 
     const tokenIndex = 9
 
     let match = null
