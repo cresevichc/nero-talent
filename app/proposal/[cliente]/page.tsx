@@ -82,7 +82,7 @@ export default function ProposalPage({
         </p>
 
         <p style={{ fontSize: "20px", marginBottom: "40px" }}>
-         {cliente || "Cliente"}
+         {cliente ? cliente : ""}
         </p>
 
         <div style={{
