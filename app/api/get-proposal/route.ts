@@ -6,7 +6,14 @@ export async function GET(req: Request) {
   try {
 
     const { searchParams } = new URL(req.url)
-    const token = (searchParams.get("token") || "").trim()
+    const url = new URL(req.url)
+const tokenFromQuery = url.searchParams.get("token")
+
+// fallback: coger token desde la URL (/proposal/[cliente])
+const pathParts = url.pathname.split("/")
+const tokenFromPath = pathParts[pathParts.length - 1]
+
+const token = (tokenFromQuery || tokenFromPath || "").trim()
 
     const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT || "{}")
 
