@@ -33,7 +33,7 @@ export async function GET(req: Request) {
     for (let i = 1; i < rows.length; i++) {
       const cell = (rows[i][tokenIndex] || "").toString().trim()
 
-      if (cell === token) {
+      if (cell.includes(token)) {
         match = rows[i]
         break
       }
