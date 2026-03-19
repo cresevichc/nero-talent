@@ -14,10 +14,8 @@ export default function ProposalPage({
   params: { cliente: string }
 }) {
 
-  
-
-const searchParams = useSearchParams()
-const token = searchParams.get("cliente") || params.cliente
+  const searchParams = useSearchParams()
+const token = searchParams.get("token") || params.cliente
 const [cliente, setCliente] = useState("")
 useEffect(() => {
   async function fetchCliente() {
