@@ -47,32 +47,27 @@ export default function ConfirmButton({ token }) {
     firmaDiv.style.transition = "opacity 0.6s ease"
 
     firmaDiv.innerHTML = `
-  <div style="margin-top:60px; text-align:left; border-top:1px solid rgba(255,255,255,0.2); padding-top:20px">
-    
-    <p style="opacity:0.6; font-size:12px; margin-bottom:10px">
-      Firma del Cliente
-    </p>
+  <div style="text-align:right">
 
-    <p style="font-size:16px; margin:4px 0">
+    <p style="font-size:14px; margin:2px 0">
       ${nome}
     </p>
 
-    <p style="font-size:14px; opacity:0.7; margin:4px 0">
+    <p style="font-size:13px; opacity:0.7; margin:2px 0">
       ${ruolo}
     </p>
 
-    <p style="font-size:12px; opacity:0.5; margin-top:10px">
+    <p style="font-size:11px; opacity:0.5; margin-top:6px">
       ${dataFirma}
     </p>
 
   </div>
 `
-    
 
-    const doc = document.getElementById("proposal-document")
+    const target = document.getElementById("client-signature")
 
-  if (doc) {
-  doc.appendChild(firmaDiv)
+if (target) {
+  target.appendChild(firmaDiv)
 
   setTimeout(() => {
     firmaDiv.style.opacity = "1"
