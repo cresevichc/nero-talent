@@ -15,12 +15,18 @@ export default function ProposalPage({
 }) {
 
   const searchParams = useSearchParams()
-const token = searchParams.get("token") || params.cliente
-const [cliente, setCliente] = useState("")
-useEffect(() => {
+ const token = searchParams.get("token") || params.cliente
+ const [cliente, setCliente] = useState("")
+ useEffect(() => {
   async function fetchCliente() {
     try {
-      const res = await fetch(`/api/get-proposal?token=${token}`)
+      const res = await fetch(`/api/get-proposal`, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ token })
+  })
       const data = await res.json()
       console.log("DATA API:", JSON.stringify(data))
 

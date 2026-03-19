@@ -1,13 +1,12 @@
 import { google } from "googleapis"
 import { NextResponse } from "next/server"
 
-export async function GET(req: Request) {
+export async function POST(req: Request) {
 
   try {
 
-    const { searchParams } = new URL(req.url)
-    const url = new URL(req.url)
-const tokenFromQuery = url.searchParams.get("token")
+const body = await req.json()
+const token = (body.token || "").trim()
 
 // fallback: coger token desde la URL (/proposal/[cliente])
 const pathParts = url.pathname.split("/")
@@ -43,13 +42,17 @@ const tokenIndex = headers.findIndex((h: string) =>
     let match = null
 
     for (let i = 1; i < rows.length; i++) {
-      const cell = (rows[i][tokenIndex] || "").toString().trim()
+  const row = rows[i]
 
-      if (cell.toString().trim() === token.trim()) {
-        match = rows[i]
-        break
-      }
-    }
+  const found = row.some((col: any) =>
+    col && col.toString().trim() === token
+  )
+
+  if (found) {
+    match = row
+    break
+  }
+}
 
     if (!match) {
       return NextResponse.json({ success: false })
