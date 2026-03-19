@@ -43,6 +43,8 @@ export default function ConfirmButton({ token }) {
 
     const firmaDiv = document.createElement("div")
     firmaDiv.id = "firma-cliente"
+    firmaDiv.style.opacity = "0"
+    firmaDiv.style.transition = "opacity 0.6s ease"
 
     firmaDiv.innerHTML = `
   <div style="margin-top:60px; text-align:left; border-top:1px solid rgba(255,255,255,0.2); padding-top:20px">
@@ -68,7 +70,14 @@ export default function ConfirmButton({ token }) {
     
 
     const doc = document.getElementById("proposal-document")
-    if (doc) doc.appendChild(firmaDiv)
+
+  if (doc) {
+  doc.appendChild(firmaDiv)
+
+  setTimeout(() => {
+    firmaDiv.style.opacity = "1"
+  }, 50)
+  }
 
     setConfirmed(true)
     setNome("")
