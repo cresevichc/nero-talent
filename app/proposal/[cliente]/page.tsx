@@ -49,7 +49,7 @@ export default function ProposalPage({
     <div
       id="proposal-document"
       style={{
-        maxWidth: "720px",
+        maxWidth: "820px",
         margin: "0 auto",
         padding: "40px",
         borderRadius: "10px",
