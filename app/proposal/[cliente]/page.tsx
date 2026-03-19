@@ -51,7 +51,7 @@ export default function ProposalPage({
         style={{
           maxWidth: "900px",
           margin: "0 auto",
-          padding: "60px 40px",
+          padding: "100px 40px",
           textAlign: "center",
           background: "#000",
           color: "#fff",
@@ -63,43 +63,56 @@ export default function ProposalPage({
       >
 
         <h1 style={{
-          fontSize: "40px",
-          fontWeight: 500,
-          letterSpacing: "0.04em",
-          marginBottom: "6px",
-          fontFamily: '"Playfair Display", serif'
-        }}>
-          NERO TALENT
-        </h1>
+  fontSize: "42px",
+  fontWeight: 500,
+  letterSpacing: "0.06em",
+  marginBottom: "10px"
+}}>
+  NERO TALENT
+</h1>
 
-        <p style={{
-          fontSize: "14px",
-          letterSpacing: "0.08em",
-          opacity: 0.7,
-          marginBottom: "40px"
-        }}>
-          SEARCH ENGAGEMENT
-        </p>
+<p style={{
+  fontSize: "11px",
+  letterSpacing: "0.22em",
+  opacity: 0.5,
+  marginBottom: "60px",
+  textTransform: "uppercase"
+}}>
+  Search Engagement
+</p>
 
-        <p style={{ fontSize: "20px", marginBottom: "40px" }}>
-         {cliente ? cliente : ""}
-        </p>
+<p style={{
+  fontSize: "36px",
+  marginBottom: "80px",
+  fontWeight: 500,
+  letterSpacing: "0.01em"
+}}>
+  {cliente ? cliente : ""}
+</p>
 
         <div style={{
-          textAlign: "left",
-          lineHeight: "1.6",
-          background: "#111",
-          padding: "30px",
-          borderRadius: "10px",
-          border: "1px solid #222"
-        }}>
+  textAlign: "left",
+  lineHeight: "1.8",
+  maxWidth: "640px",
+  margin: "0 auto",
+  marginTop: "40px",
+  fontSize: "15px",
+  opacity: 0.9
+}}>
 
           <p>
 La presente ha lo scopo di formalizzare la proposta di collaborazione di NERO Talent
 per l’attività di ricerca e selezione.
 </p>
 
-<h3 style={{marginTop:"30px"}}>Ambito del Servizio</h3>
+<h3 style={{
+  marginTop: "50px",
+  marginBottom: "10px",
+  fontSize: "14px",
+  letterSpacing: "0.12em",
+  textTransform: "uppercase",
+  opacity: 0.6
+}}></h3>
 
 <p>
 NERO Talent supporta le aziende tecnologiche nell’identificazione, valutazione e
@@ -115,13 +128,20 @@ presentazione di candidati qualificati per ruoli strategici.
 – supporto durante l’intero processo di selezione fino alla chiusura
 </p>
 
-<p style={{marginTop:"20px"}}>
+<p style={{ marginTop: "20px", marginBottom: "14px" }}>
 Durante il processo, il Cliente avrà inoltre accesso a un <b>NERO Client Portal</b>
 dedicato, attraverso il quale sarà possibile monitorare lo stato della ricerca,
 visualizzare i candidati presentati e seguire l’evoluzione del processo in tempo reale.
 </p>
 
-<h3 style={{marginTop:"30px"}}>Compenso</h3>
+<h3 style={{
+  marginTop: "50px",
+  marginBottom: "10px",
+  fontSize: "14px",
+  letterSpacing: "0.12em",
+  textTransform: "uppercase",
+  opacity: 0.6
+}}></h3>
 
 <p>
 Il compenso per l’attività di ricerca e selezione è pari al <b>20% della RAL</b>.
@@ -131,7 +151,14 @@ Il compenso per l’attività di ricerca e selezione è pari al <b>20% della RAL
 In caso di pagamento entro <b>7 giorni</b>, il compenso sarà pari al <b>17% della RAL</b>.
 </p>
 
-<h3 style={{marginTop:"30px"}}>Garanzia</h3>
+<h3 style={{
+  marginTop: "50px",
+  marginBottom: "10px",
+  fontSize: "14px",
+  letterSpacing: "0.12em",
+  textTransform: "uppercase",
+  opacity: 0.6
+}}></h3>
 
 <p>
 NERO Talent offre una <b>garanzia di sostituzione di 90 giorni</b>.
@@ -141,19 +168,40 @@ NERO Talent offre una <b>garanzia di sostituzione di 90 giorni</b>.
 Qualora il rapporto si interrompa, la ricerca verrà riattivata senza costi aggiuntivi.
 </p>
 
-<h3 style={{marginTop:"30px"}}>Tutela della Presentazione</h3>
+<h3 style={{
+  marginTop: "50px",
+  marginBottom: "10px",
+  fontSize: "14px",
+  letterSpacing: "0.12em",
+  textTransform: "uppercase",
+  opacity: 0.6
+}}></h3>
 
 <p>
 Se il candidato viene assunto entro <b>12 mesi</b>, il compenso sarà comunque dovuto.
 </p>
 
-<h3 style={{marginTop:"30px"}}>Validità della Proposta</h3>
+<h3 style={{
+  marginTop: "50px",
+  marginBottom: "10px",
+  fontSize: "14px",
+  letterSpacing: "0.12em",
+  textTransform: "uppercase",
+  opacity: 0.6
+}}></h3>
 
 <p>
 La proposta ha validità di <b>30 giorni</b>.
 </p>
 
-<h3 style={{marginTop:"30px"}}>Chiusura</h3>
+<h3 style={{
+  marginTop: "50px",
+  marginBottom: "10px",
+  fontSize: "14px",
+  letterSpacing: "0.12em",
+  textTransform: "uppercase",
+  opacity: 0.6
+}}></h3>
 
 <p>
 Le condizioni complete saranno regolate dal contratto di incarico.
@@ -161,10 +209,37 @@ Le condizioni complete saranno regolate dal contratto di incarico.
 
         </div>
 
-        <div style={{ marginTop: "40px", textAlign: "left" }}>
-          <p style={{ opacity: 0.7 }}>NERO Talent</p>
-          <p>Cristian Cresevich</p>
-          <p>Founder</p>
+        <div style={{
+  marginTop: "100px",
+  textAlign: "left",
+  maxWidth: "640px",
+  marginLeft: "auto",
+  marginRight: "auto"
+}}>
+  <p style={{
+    fontSize: "12px",
+    letterSpacing: "0.12em",
+    textTransform: "uppercase",
+    opacity: 0.5,
+    marginBottom: "20px"
+  }}>
+    NERO Talent
+  </p>
+
+  <p style={{
+    fontSize: "18px",
+    marginBottom: "4px"
+  }}>
+    Cristian Cresevich
+  </p>
+
+  <p style={{
+    fontSize: "14px",
+    opacity: 0.7
+  }}>
+    Founder
+  </p>
+</div>
                 </div> {/* cierre proposal-document */}
       </div>
 

@@ -115,23 +115,25 @@ export default function ConfirmButton({ token }) {
   onClick={confirmEngagement}
   disabled={confirming || confirmed}
   style={{
-    padding: "12px 20px",
-    background: confirmed ? "#39FF14" : "#fff",
-    color: "#000",
-    border: "none",
+    padding: "14px 28px",
+    background: confirmed ? "#39FF14" : "transparent",
+    color: confirmed ? "#000" : "#fff",
+    border: "1px solid rgba(255,255,255,0.2)",
     cursor: confirming ? "not-allowed" : "pointer",
     opacity: confirming ? 0.6 : 1,
     borderRadius: "999px",
-    transition: "all 0.3s ease"
+    transition: "all 0.3s ease",
+    letterSpacing: "0.12em",
+    textTransform: "uppercase",
+    fontSize: "12px"
   }}
 >
   {confirming
     ? "Confermando..."
     : confirmed
-    ? "Collaborazione confermata"
-    : "Conferma collaborazione"}
+    ? "Firmato"
+    : "Firma e conferma"}
 </button>
-
 
           </div>
 
