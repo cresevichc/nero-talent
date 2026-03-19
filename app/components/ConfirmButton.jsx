@@ -95,12 +95,23 @@ export default function ConfirmButton({ token }) {
             />
 
             <button
-  onClick={() => {
-    console.log("CLICK FUNCIONA")
-    confirmEngagement()
+  onClick={confirmEngagement}
+  disabled={confirming || confirmed}
+  style={{
+    padding: "12px 20px",
+    background: confirmed ? "#39FF14" : "#fff",
+    color: "#000",
+    border: "none",
+    cursor: confirming ? "not-allowed" : "pointer",
+    opacity: confirming ? 0.6 : 1,
+    transition: "all 0.3s ease"
   }}
 >
-  Conferma collaborazione
+  {confirming
+    ? "Confermando..."
+    : confirmed
+    ? "Collaborazione confermata"
+    : "Conferma collaborazione"}
 </button>
 
 
