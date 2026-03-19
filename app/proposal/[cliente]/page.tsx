@@ -24,6 +24,7 @@ useEffect(() => {
     try {
       const res = await fetch(`/api/get-proposal?token=${token}`)
       const data = await res.json()
+      console.log("DATA API:", data)
 
       if (data.success) {
         setCliente(data.nome)
