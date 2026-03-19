@@ -26,11 +26,7 @@ export async function GET(req: Request) {
 
     const rows = read.data.values || []
 
-    const headers = rows[0] || []
-
-    const tokenIndex = headers.findIndex((h: string) =>
-  h.toString().trim().toLowerCase().includes("token")
-)
+    const tokenIndex = 9
 
     let match = null
 
