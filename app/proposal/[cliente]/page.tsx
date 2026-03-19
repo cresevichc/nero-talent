@@ -164,7 +164,7 @@ export default function ProposalPage({
   </div>
 
 </div>
-        <d<div
+        <div
   style={{
     display: "flex",
     justifyContent: "space-between",
