@@ -53,10 +53,10 @@ export default function ConfirmButton({ token }) {
     const doc = document.getElementById("proposal-document")
     if (doc) doc.appendChild(firmaDiv)
 
-
     setConfirmed(true)
+    setNome("")
+    setRuolo("")
 
-    
   }
 
   setConfirming(false)
@@ -104,6 +104,7 @@ export default function ConfirmButton({ token }) {
     border: "none",
     cursor: confirming ? "not-allowed" : "pointer",
     opacity: confirming ? 0.6 : 1,
+    borderRadius: "999px",
     transition: "all 0.3s ease"
   }}
 >
