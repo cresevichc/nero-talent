@@ -216,18 +216,7 @@ export default function ProposalPage({
 
             {/* CLIENTE */}
             <div style={{ textAlign: "left" }}>
-              <p
-                className={playfair.className}
-                style={{
-                  fontSize: "16px",
-                  fontWeight: 500,
-                  marginBottom: "6px"
-                }}
-              >
-                {cliente}
-              </p>
-
-              <div id="client-signature" />
+              <div id="client-signature" style={{ textAlign: "left" }} />
             </div>
 
         </div>
