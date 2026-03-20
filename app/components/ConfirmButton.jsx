@@ -77,6 +77,9 @@ if (target) {
     setConfirmed(true)
     setNome("")
     setRuolo("")
+    setTimeout(() => {
+  setConfirmed(false)
+  }, 2000)
 
   }
 
