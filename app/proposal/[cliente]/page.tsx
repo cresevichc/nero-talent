@@ -187,7 +187,7 @@ export default function ProposalPage({
           <div style={{
             display: "flex",
             justifyContent: "space-between",
-            marginTop: "60px",
+            marginTop: "30px",
             alignItems: "flex-end"
           }}>
 
