@@ -74,7 +74,7 @@ if (target) {
   }, 50)
   }
   const element = document.getElementById("proposal-document")
-  const clone = element.cloneNode(true) as HTMLElement
+  const clone = element.cloneNode(true) 
   clone.style.padding = "20px"
   clone.style.transform = "scale(0.95)"
   clone.style.transformOrigin = "top center"
