@@ -75,6 +75,23 @@ if (target) {
   }
   const element = document.getElementById("proposal-document")
   const clone = element.cloneNode(true) 
+  const cloneSignatureContainer = clone.querySelector("#client-signature")
+
+if (cloneSignatureContainer) {
+  cloneSignatureContainer.innerHTML = `
+    <div style="text-align:right">
+      <p style="font-size:14px; margin:2px 0">
+        ${nome}
+      </p>
+      <p style="font-size:13px; opacity:0.7; margin:2px 0">
+        ${ruolo}
+      </p>
+      <p style="font-size:11px; opacity:0.5; margin-top:6px">
+        ${dataFirma}
+      </p>
+    </div>
+  `
+}
   clone.style.padding = "20px"
   clone.style.transform = "scale(0.95)"
   clone.style.transformOrigin = "top center"
