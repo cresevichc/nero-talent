@@ -185,7 +185,9 @@ export default function ProposalPage({
         {/* FIRMA */}
 
         <div style={{
-          textAlign: "center",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
           marginTop: "40px"
         }}>
 
