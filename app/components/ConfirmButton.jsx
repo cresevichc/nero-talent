@@ -74,6 +74,10 @@ if (target) {
   }, 50)
   }
   const element = document.getElementById("proposal-document")
+  const clone = element.cloneNode(true) as HTMLElement
+  clone.style.padding = "20px"
+  clone.style.transform = "scale(0.95)"
+  clone.style.transformOrigin = "top center"
 
 if (element) {
   // 👇 reducir espacio SOLO para PDF
@@ -123,7 +127,7 @@ paragraphs.forEach(p => {
 
   await new Promise(resolve => setTimeout(resolve, 500))
 
-  await html2pdf().set(opt).from(element).save()
+  await html2pdf().set(opt).from(clone).save()
 
   // 👇 restaurar después
   element.style.paddingTop = ""

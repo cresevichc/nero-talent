@@ -6,10 +6,10 @@ export async function POST(req: Request) {
 
   try {
 
-    const body = await req.json()
+    console.log("BODY:", body)
     const { token } = body
     console.log("TOKEN FRONT:", token)
-    const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT || "{}")
+    const serviceAccount = require("../../../google-service-account.json")
     const auth = new google.auth.GoogleAuth({
       credentials: serviceAccount,
       scopes: ["https://www.googleapis.com/auth/spreadsheets"]
