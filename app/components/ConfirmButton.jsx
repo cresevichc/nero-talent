@@ -81,15 +81,20 @@ if (element) {
   element.style.paddingBottom = "20px"
 
   // 👇 compactar header SOLO para PDF
-const header = element.querySelector("div")
+  // 👇 compactar header SOLO para PDF (safe)
+try {
+  const h1 = element.querySelector("h1")
 
-if (header) {
-  const header = element.querySelector("h1")?.parentElement
-  const pTags = header.querySelectorAll("p")
+  if (h1) {
+    const header = h1.parentElement
+    const pTags = header.querySelectorAll("p")
 
-  if (h1) h1.style.marginBottom = "2px"
-  if (pTags[0]) pTags[0].style.marginBottom = "8px"
-  if (pTags[1]) pTags[1].style.marginTop = "4px"
+    h1.style.marginBottom = "2px"
+    if (pTags[0]) pTags[0].style.marginBottom = "8px"
+    if (pTags[1]) pTags[1].style.marginTop = "4px"
+  }
+} catch (e) {
+  console.log("header adjust error", e)
 }
   const opt = {
     margin: [10, 10, 10, 10],
