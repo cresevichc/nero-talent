@@ -84,7 +84,7 @@ if (element) {
 const header = element.querySelector("div")
 
 if (header) {
-  const h1 = header.querySelector("h1")
+  const header = element.querySelector("h1")?.parentElement
   const pTags = header.querySelectorAll("p")
 
   if (h1) h1.style.marginBottom = "2px"
