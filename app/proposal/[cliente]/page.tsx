@@ -192,7 +192,7 @@ export default function ProposalPage({
         }}>
 
           {/* NERO */}
-          <div>
+          <div style={{ width: "50%" }}>
             <p
               className={playfair.className}
               style={{
