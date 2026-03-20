@@ -80,6 +80,17 @@ if (element) {
   element.style.paddingTop = "20px"
   element.style.paddingBottom = "20px"
 
+  // 👇 compactar header SOLO para PDF
+const header = element.querySelector("div")
+
+if (header) {
+  const h1 = header.querySelector("h1")
+  const pTags = header.querySelectorAll("p")
+
+  if (h1) h1.style.marginBottom = "2px"
+  if (pTags[0]) pTags[0].style.marginBottom = "8px"
+  if (pTags[1]) pTags[1].style.marginTop = "4px"
+}
   const opt = {
     margin: [10, 10, 10, 10],
     filename: `NERO_Proposal_${cliente}.pdf`,
