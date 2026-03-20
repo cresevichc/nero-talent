@@ -77,20 +77,21 @@ if (target) {
 
 if (element) {
   const opt = {
-    margin: 0,
-    filename: `NERO_Proposal_${cliente}.pdf`,
-    image: { type: "jpeg", quality: 1 },
-    html2canvas: {
-      scale: 1.6,
-      backgroundColor: "#0D0D0F"
-    },
-    jsPDF: {
-      unit: "mm",
-      format: "a4",
-      orientation: "portrait"
-    }
-  }
-
+  margin: [10, 10, 10, 10], // margen real A4
+  filename: `NERO_Proposal_${cliente}.pdf`,
+  image: { type: "jpeg", quality: 1 },
+  html2canvas: {
+    scale: 1.4,
+    backgroundColor: "#0D0D0F",
+    scrollY: 0
+  },
+  jsPDF: {
+    unit: "mm",
+    format: "a4",
+    orientation: "portrait"
+  },
+  pagebreak: { mode: ["avoid-all"] }
+}
   await new Promise(resolve => setTimeout(resolve, 500))
 
   await html2pdf().set(opt).from(element).save()
