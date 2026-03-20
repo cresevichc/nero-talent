@@ -183,45 +183,43 @@ export default function ProposalPage({
         </div>
 
         {/* FIRMA */}
-        
-          <div style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginTop: "30px",
-            alignItems: "flex-start"
-          }}>
 
-            {/* NERO */}
-            <div>
-              <p
-                className={playfair.className}
-                style={{
-                  fontSize: "16px",
-                  fontWeight: 600,
-                  letterSpacing: "0.04em",
-                  marginBottom: "6px"
-                }}
-              >
-                NERO TALENT
-              </p>
+        <div style={{
+          textAlign: "center",
+          marginTop: "40px"
+        }}>
 
-              <p style={{ fontSize: "14px", marginBottom: "2px" }}>
-                Cristian Cresevich
-              </p>
+          {/* NERO */}
+          <div>
+            <p
+              className={playfair.className}
+              style={{
+                fontSize: "16px",
+                fontWeight: 600,
+                letterSpacing: "0.04em",
+                marginBottom: "6px"
+              }}
+            >
+              NERO TALENT
+            </p>
 
-              <p style={{ fontSize: "13px", opacity: 0.7 }}>
-                Founder
-              </p>
-            </div>
+            <p style={{ fontSize: "14px", marginBottom: "2px" }}>
+              Cristian Cresevich
+            </p>
 
-            {/* CLIENTE */}
-            <div style={{ textAlign: "left" }}>
-              <div id="client-signature" style={{ textAlign: "left" }} />
-            </div>
+            <p style={{ fontSize: "13px", opacity: 0.7 }}>
+              Founder
+            </p>
+          </div>
+
+          {/* CLIENTE */}
+          <div style={{ textAlign: "center" }}>
+            <div id="client-signature" style={{ textAlign: "center", marginTop: "20px" }} />
+          </div>
 
         </div>
-        </div>
-        
+      </div>
+
       <div style={{ textAlign: "center", marginTop: "40px" }}>
         <ConfirmButton token={token} />
       </div>
