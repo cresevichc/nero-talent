@@ -121,8 +121,8 @@ paragraphs.forEach(p => {
       unit: "mm",
       format: "a4",
       orientation: "portrait"
-    },
-    pagebreak: { mode: ["avoid-all"] }
+    }
+    
   }
 
   await new Promise(resolve => setTimeout(resolve, 500))
