@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react"
-
+import html2pdf from "html2pdf.js"
 export default function ConfirmButton({ token }) {
 
   const [confirming, setConfirming] = useState(false)
@@ -72,6 +72,26 @@ if (target) {
   setTimeout(() => {
     firmaDiv.style.opacity = "1"
   }, 50)
+  }
+  const element = document.getElementById("proposal-document")
+
+if (element) {
+  const opt = {
+    margin: 0,
+    filename: `NERO_Proposal_${cliente}.pdf`,
+    image: { type: "jpeg", quality: 1 },
+    html2canvas: {
+      scale: 2,
+      backgroundColor: "#0D0D0F"
+    },
+    jsPDF: {
+      unit: "mm",
+      format: "a4",
+      orientation: "portrait"
+    }
+  }
+
+  await html2pdf().set(opt).from(element).save()
   }
 
     setConfirmed(true)
