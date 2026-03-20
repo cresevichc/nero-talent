@@ -81,7 +81,7 @@ if (element) {
     filename: `NERO_Proposal_${cliente}.pdf`,
     image: { type: "jpeg", quality: 1 },
     html2canvas: {
-      scale: 2,
+      scale: 1.6,
       backgroundColor: "#0D0D0F"
     },
     jsPDF: {
@@ -90,6 +90,8 @@ if (element) {
       orientation: "portrait"
     }
   }
+
+  await new Promise(resolve => setTimeout(resolve, 500))
 
   await html2pdf().set(opt).from(element).save()
   }
