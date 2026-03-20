@@ -188,7 +188,7 @@ export default function ProposalPage({
             display: "flex",
             justifyContent: "space-between",
             marginTop: "30px",
-            alignItems: "flex-end"
+            alignItems: "flex-start"
           }}>
 
             {/* NERO */}
