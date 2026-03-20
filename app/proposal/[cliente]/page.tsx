@@ -205,7 +205,7 @@ export default function ProposalPage({
                 NERO TALENT
               </p>
 
-              <p style={{ fontSize: "15px", marginBottom: "2px" }}>
+              <p style={{ fontSize: "14px", marginBottom: "2px" }}>
                 Cristian Cresevich
               </p>
 
