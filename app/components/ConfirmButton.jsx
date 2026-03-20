@@ -96,6 +96,14 @@ try {
 } catch (e) {
   console.log("header adjust error", e)
 }
+// 👇 compactar texto SOLO para PDF
+element.style.lineHeight = "1.6"
+
+const paragraphs = element.querySelectorAll("p")
+paragraphs.forEach(p => {
+  p.style.marginTop = "8px"
+  p.style.marginBottom = "8px"
+})
   const opt = {
     margin: [10, 10, 10, 10],
     filename: `NERO_Proposal_${cliente}.pdf`,
