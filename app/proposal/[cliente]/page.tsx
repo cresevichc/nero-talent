@@ -52,8 +52,7 @@ export default function ProposalPage({
   return (
     <div style={{ background: "#000", minHeight: "100vh", padding: "40px 0" }}>
 
-      <div
-        id="proposal-document"
+      <div id="proposal-document"
         style={{
           maxWidth: "820px",
           margin: "0 auto",
@@ -184,39 +183,56 @@ export default function ProposalPage({
         </div>
 
         {/* FIRMA */}
-        <div style={{
-          display: "flex",
-          gap: "80px",
-          marginTop: "60px"
-        }}>
+        
+          <div style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginTop: "60px",
+            alignItems: "flex-end"
+          }}>
 
-          <div>
-            <p
-              className={playfair.className}
-              style={{
-                fontSize: "16px",
-                fontWeight: 600,
-                letterSpacing: "0.04em",
-                marginBottom: "6px"
-              }}
-            >
-              NERO TALENT
-            </p>
-            <p>Cristian Cresevich</p>
-            <p style={{ fontSize: "13px", opacity: 0.7 }}>Founder</p>
-          </div>
+            {/* NERO */}
+            <div>
+              <p
+                className={playfair.className}
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 600,
+                  letterSpacing: "0.04em",
+                  marginBottom: "6px"
+                }}
+              >
+                NERO TALENT
+              </p>
 
-          <div style={{ textAlign: "left" }}>
+              <p style={{ fontSize: "15px", marginBottom: "2px" }}>
+                Cristian Cresevich
+              </p>
 
-            <p>{cliente || "__________"}</p>
+              <p style={{ fontSize: "13px", opacity: 0.7 }}>
+                Founder
+              </p>
+            </div>
 
-            <div id="client-signature" />
-          </div>
+            {/* CLIENTE */}
+            <div style={{ textAlign: "left" }}>
+              <p
+                className={playfair.className}
+                style={{
+                  fontSize: "16px",
+                  fontWeight: 500,
+                  marginBottom: "6px"
+                }}
+              >
+                {cliente}
+              </p>
+
+              <div id="client-signature" />
+            </div>
 
         </div>
-
-      </div>
-
+        </div>
+        
       <div style={{ textAlign: "center", marginTop: "40px" }}>
         <ConfirmButton token={token} />
       </div>
