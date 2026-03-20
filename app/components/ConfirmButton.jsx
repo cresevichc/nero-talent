@@ -76,26 +76,35 @@ if (target) {
   const element = document.getElementById("proposal-document")
 
 if (element) {
+  // 👇 reducir espacio SOLO para PDF
+  element.style.paddingTop = "20px"
+  element.style.paddingBottom = "20px"
+
   const opt = {
-  margin: [10, 10, 10, 10], // margen real A4
-  filename: `NERO_Proposal_${cliente}.pdf`,
-  image: { type: "jpeg", quality: 1 },
-  html2canvas: {
-    scale: 1.4,
-    backgroundColor: "#0D0D0F",
-    scrollY: 0
-  },
-  jsPDF: {
-    unit: "mm",
-    format: "a4",
-    orientation: "portrait"
-  },
-  pagebreak: { mode: ["avoid-all"] }
-}
+    margin: [10, 10, 10, 10],
+    filename: `NERO_Proposal_${cliente}.pdf`,
+    image: { type: "jpeg", quality: 1 },
+    html2canvas: {
+      scale: 1.4,
+      backgroundColor: "#0D0D0F",
+      scrollY: 0
+    },
+    jsPDF: {
+      unit: "mm",
+      format: "a4",
+      orientation: "portrait"
+    },
+    pagebreak: { mode: ["avoid-all"] }
+  }
+
   await new Promise(resolve => setTimeout(resolve, 500))
 
   await html2pdf().set(opt).from(element).save()
-  }
+
+  // 👇 restaurar después
+  element.style.paddingTop = ""
+  element.style.paddingBottom = ""
+}
 
     setConfirmed(true)
     setNome("")
