@@ -137,8 +137,14 @@ export default function ConfirmButton({ token }) {
       setNome("")
       setRuolo("")
       setTimeout(() => {
-        setConfirmed(false)
-      }, 2000)
+      setConfirmed(false)
+
+      const existingSignature = document.getElementById("firma-cliente")
+      if (existingSignature) {
+      existingSignature.remove()
+     }
+
+     }, 2000)
 
     }
 
