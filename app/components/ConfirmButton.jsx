@@ -75,6 +75,13 @@ export default function ConfirmButton({ token }) {
       }
       const element = document.getElementById("proposal-document")
       const clone = element.cloneNode(true)
+      const ambito = clone.querySelectorAll("p")
+
+      ambito.forEach(p => {
+      if (p.innerText.includes("Ambito del Servizio")) {
+      p.style.display = "none"
+      }
+      })
       clone.style.boxShadow = "none"
       clone.style.borderRadius = "0"
       const cloneSignatureContainer = clone.querySelector("#client-signature")
