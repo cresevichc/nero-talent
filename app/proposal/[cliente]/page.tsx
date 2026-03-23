@@ -189,7 +189,7 @@ export default function ProposalPage({
           justifyContent: "center",
           alignItems: "flex-end",
           gap: "80px",
-          marginTop: "10px"
+          marginTop: "50px"
         }}>
           {/* NERO */}
           <div style={{ width: "50%" }}>
