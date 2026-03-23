@@ -98,35 +98,7 @@ export default function ConfirmButton({ token }) {
       clone.style.padding = "20px"
       
 
-      if (element) {
-        // 👇 reducir espacio SOLO para PDF
-        element.style.paddingTop = "20px"
-        element.style.paddingBottom = "20px"
-
-        // 👇 compactar header SOLO para PDF
-        // 👇 compactar header SOLO para PDF (safe)
-        try {
-          const h1 = element.querySelector("h1")
-
-          if (h1) {
-            const header = h1.parentElement
-            const pTags = header.querySelectorAll("p")
-
-            h1.style.marginBottom = "2px"
-            if (pTags[0]) pTags[0].style.marginBottom = "8px"
-            if (pTags[1]) pTags[1].style.marginTop = "4px"
-          }
-        } catch (e) {
-          console.log("header adjust error", e)
-        }
-        // 👇 compactar texto SOLO para PDF
-        element.style.lineHeight = "1.4"
-
-        const paragraphs = element.querySelectorAll("p")
-        paragraphs.forEach(p => {
-          p.style.marginTop = "8px"
-          p.style.marginBottom = "8px"
-        })
+      
         const opt = {
           margin: [10, 10, 10, 10],
           filename: `NERO_Proposal_${cliente}.pdf`,
