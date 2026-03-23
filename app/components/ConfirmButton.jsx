@@ -120,7 +120,7 @@ export default function ConfirmButton({ token }) {
           console.log("header adjust error", e)
         }
         // 👇 compactar texto SOLO para PDF
-        element.style.lineHeight = "1.6"
+        element.style.lineHeight = "1.4"
 
         const paragraphs = element.querySelectorAll("p")
         paragraphs.forEach(p => {
