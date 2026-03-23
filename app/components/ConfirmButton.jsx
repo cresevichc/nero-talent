@@ -74,7 +74,7 @@ export default function ConfirmButton({ token }) {
         }, 50)
       }
       const element = document.getElementById("proposal-document")
-      
+      const clone = element.cloneNode(true)
       const cloneSignatureContainer = clone.querySelector("#client-signature")
 
       if (cloneSignatureContainer) {
@@ -144,6 +144,7 @@ export default function ConfirmButton({ token }) {
         }
 
         await new Promise(resolve => setTimeout(resolve, 500))
+        
 
         await html2pdf().set(opt).from(clone).save()
 
