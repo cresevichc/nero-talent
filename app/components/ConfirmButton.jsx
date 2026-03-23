@@ -94,7 +94,7 @@ export default function ConfirmButton({ token }) {
   `
       }
       clone.style.padding = "20px"
-      clone.style.transform = "scale(0.93)"
+      clone.style.transform = "scale(0.95)"
       clone.style.transformOrigin = "top center"
 
       if (element) {
