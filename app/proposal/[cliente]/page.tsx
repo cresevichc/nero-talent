@@ -126,7 +126,7 @@ export default function ProposalPage({
           </p>
 
           <p style={{ marginTop: "15px" }}>
-            Durante il processo, il Cliente avrà inoltre accesso a un <b>NERO Client Portal</b>
+            Durante il processo, il Cliente avrà inoltre accesso a un <b>NERO Client Portal</b>{" "}
             dedicato, attraverso il quale sarà possibile monitorare lo stato della ricerca,
             visualizzare i candidati presentati e seguire l’evoluzione del processo in tempo reale.
           </p>
