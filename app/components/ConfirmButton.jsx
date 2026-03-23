@@ -75,6 +75,8 @@ export default function ConfirmButton({ token }) {
       }
       const element = document.getElementById("proposal-document")
       const clone = element.cloneNode(true)
+      clone.style.boxShadow = "none"
+      clone.style.borderRadius = "0"
       const cloneSignatureContainer = clone.querySelector("#client-signature")
 
       if (cloneSignatureContainer) {
