@@ -94,7 +94,7 @@ export default function ConfirmButton({ token }) {
       </p>
     </div>
   `
-      }
+      
       clone.style.padding = "20px"
       
 
