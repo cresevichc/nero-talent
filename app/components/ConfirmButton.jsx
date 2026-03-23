@@ -39,6 +39,7 @@ export default function ConfirmButton({ token }) {
     } catch (e) { }
 
     if (data.success) {
+      const emailCliente = data.emailCliente
       setCliente(data.nome)
 
       const firmaDiv = document.createElement("div")
@@ -138,7 +139,27 @@ export default function ConfirmButton({ token }) {
         await new Promise(resolve => setTimeout(resolve, 500))
         
 
-        await html2pdf().set(opt).from(clone).save()
+        const pdfBlob = await html2pdf().set(opt).from(clone).outputPdf("blob")
+
+        const reader = new FileReader()
+
+        const pdfBase64 = await new Promise((resolve) => {
+        reader.onloadend = () => resolve(reader.result)
+        reader.readAsDataURL(pdfBlob)
+      })
+
+        await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json"
+       },
+        body: JSON.stringify({
+        nome,
+        cliente,
+        emailCliente,
+        pdfBase64
+      })
+      })
 
         // 👇 restaurar después
         element.style.paddingTop = ""

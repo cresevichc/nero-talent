@@ -42,6 +42,7 @@ export async function POST(req: Request) {
 
       if (cell.trim() === token.trim()) {
         match = rows[i]
+        const emailCliente = match[8] || ""
         rowIndex = i + 1
         break
       }
@@ -61,8 +62,9 @@ export async function POST(req: Request) {
     })
 
     return NextResponse.json({
-      success: true,
-      nome: match[0] || ""
+    success: true,
+    nome: match[0] || "",
+    emailCliente
     })
 
   } catch (error) {
