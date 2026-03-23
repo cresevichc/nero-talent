@@ -75,6 +75,11 @@ export default function ConfirmButton({ token }) {
       }
       const element = document.getElementById("proposal-document")
       const clone = element.cloneNode(true)
+      const signatureBlock = clone.querySelector("#client-signature")?.parentElement
+
+     if (signatureBlock) {
+     signatureBlock.style.marginTop = "20px"
+     }
       const ambito = clone.querySelectorAll("p")
 
       ambito.forEach(p => {
