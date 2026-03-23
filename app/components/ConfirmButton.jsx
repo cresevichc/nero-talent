@@ -96,11 +96,7 @@ export default function ConfirmButton({ token }) {
   `
       }
       clone.style.padding = "20px"
-      html2canvas: {
-      scale: 1.4,
-      backgroundColor: "#0D0D0F",
-      scrollY: 0
-      }
+      
 
       if (element) {
         // 👇 reducir espacio SOLO para PDF
@@ -136,7 +132,7 @@ export default function ConfirmButton({ token }) {
           filename: `NERO_Proposal_${cliente}.pdf`,
           image: { type: "jpeg", quality: 1 },
           html2canvas: {
-            scale: 1.4,
+            scale: 2,
             backgroundColor: "#0D0D0F",
             scrollY: 0
           },
