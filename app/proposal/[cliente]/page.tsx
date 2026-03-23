@@ -56,7 +56,7 @@ export default function ProposalPage({
         style={{
           maxWidth: "820px",
           margin: "0 auto",
-          padding: "40px",
+          padding: "40px 40px 60px 40px",
           borderRadius: "10px",
           border: "1px solid rgba(255,255,255,0.05)",
           background: "#0D0D0F",
