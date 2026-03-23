@@ -96,8 +96,11 @@ export default function ConfirmButton({ token }) {
   `
       }
       clone.style.padding = "20px"
-      clone.style.transform = "scale(0.95)"
-      clone.style.transformOrigin = "top center"
+      html2canvas: {
+      scale: 1.4,
+      backgroundColor: "#0D0D0F",
+      scrollY: 0
+      }
 
       if (element) {
         // 👇 reducir espacio SOLO para PDF
