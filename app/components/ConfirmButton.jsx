@@ -108,6 +108,13 @@ export default function ConfirmButton({ token }) {
   `
       
       clone.style.padding = "20px"
+      const allText = clone.querySelectorAll("p")
+
+      allText.forEach(p => {
+      p.style.marginTop = "6px"
+      p.style.marginBottom = "6px"
+      p.style.lineHeight = "1.4"
+     })
       
 
       
