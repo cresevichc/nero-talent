@@ -37,8 +37,9 @@ body {
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(245, 247, 250, 0.6) 45%,
-    rgba(245, 247, 250, 0.6) 55%,
+    rgba(245, 247, 250, 0.15) 30%,
+    rgba(245, 247, 250, 0.5) 50%,
+    rgba(245, 247, 250, 0.15) 70%,
     transparent 100%
   );
 
