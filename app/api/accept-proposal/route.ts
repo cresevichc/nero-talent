@@ -42,7 +42,6 @@ export async function POST(req: Request) {
 
       if (cell.trim() === token.trim()) {
         match = rows[i]
-        const emailCliente = match[8] || ""
         rowIndex = i + 1
         break
       }
