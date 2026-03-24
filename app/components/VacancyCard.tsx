@@ -3,6 +3,7 @@ const isClosed = v.statoPosizione === "Chiusa"
 return (
 
 <div
+className="vacancy-hover"  
 style={{
 marginTop: "30px",
 marginBottom: "30px",
