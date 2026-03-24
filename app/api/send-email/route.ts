@@ -10,7 +10,8 @@ export async function POST(req: Request) {
 
     const { nome, cliente, emailCliente, pdfBase64 } = body
 
-    await resend.emails.send({
+    const response = await resend.emails.send({
+      
       from: "NERO Talent <onboarding@resend.dev>",
       to: ["cristian@nerotalent.com", emailCliente],
       subject: `Proposal firmata - ${cliente}`,
@@ -26,7 +27,7 @@ export async function POST(req: Request) {
         },
       ],
     })
-
+    console.log("EMAIL RESPONSE:", response)
     return NextResponse.json({ success: true })
 
   } catch (error) {
