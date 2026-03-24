@@ -12,7 +12,7 @@ export async function POST(req: Request) {
 
     const response = await resend.emails.send({
       
-      from: "NERO Talent <onboarding@resend.dev>",
+      from: "NERO Talent <info@nerotalent.com>",
       to: ["cristian@nerotalent.com", emailCliente],
       subject: `Proposal firmata - ${cliente}`,
       html: `
