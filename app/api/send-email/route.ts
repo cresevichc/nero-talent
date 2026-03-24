@@ -22,9 +22,11 @@ export async function POST(req: Request) {
       html: `
 <div style="color:#111;">
 
-  <p style="font-family: Arial, Helvetica, sans-serif; font-size:16px; margin-bottom:16px;">
+  <p style="margin-bottom:16px;">
+  <span style="font-family: Arial, Helvetica, sans-serif; font-size:16px; color:#111;">
     La proposta è stata finalizzata.
-  </p>
+  </span>
+</p>
 
   <p style="font-family: Arial, Helvetica, sans-serif; margin-bottom:8px;">
     <strong>Azienda:</strong> ${cliente}
