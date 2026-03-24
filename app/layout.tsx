@@ -34,6 +34,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-[#0D0D0F] text-[#F5F7FA] ${inter.className}`}>
+        <div className="background-glow" />
+        <div>TEST</div>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
