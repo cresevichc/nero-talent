@@ -20,30 +20,19 @@ export async function POST(req: Request) {
       to: ["cristian@nerotalent.com", emailCliente],
       subject: `Proposal firmata - ${cliente}`,
       html: `
-<table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr>
-    <td style="font-family: Arial, Helvetica, sans-serif; font-size:16px; color:#111; padding-bottom:16px;">
-      La proposta è stata finalizzata.
-    </td>
-  </tr>
-</table>
+<div style="text-align:center;">
 
-<p style="font-family: Arial, Helvetica, sans-serif; margin-bottom:8px;">
-  <strong>Azienda:</strong> ${cliente}
-</p>
+  <img 
+    src="https://i.imgur.com/KWAv3C9.png"
+    alt="NERO Talent"
+    style="max-width:600px; width:100%; height:auto; margin-bottom:24px;"
+  />
 
-<p style="font-family: Arial, Helvetica, sans-serif; margin-bottom:24px;">
-  <strong>Firmato da:</strong> ${nome}
-</p>
+  <p style="font-family: Arial, Helvetica, sans-serif; font-size:14px; color:#555;">
+    Il documento firmato è allegato a questa email.
+  </p>
 
-<p style="font-family: Arial, Helvetica, sans-serif; font-size:14px; color:#555;">
-  Il documento firmato è allegato a questa email.
-</p>
-
-<p style="font-family: Arial, Helvetica, sans-serif; margin-top:32px; font-size:14px; color:#777;">
-  <strong style="letter-spacing:0.5px;">NERO Talent</strong><br/>
-  Technology Talent Advisory
-</p>
+</div>
 `,
       attachments: [
         {
