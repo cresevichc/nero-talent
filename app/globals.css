@@ -164,7 +164,12 @@ body {
   height: 1px;
   margin: 140px auto 110px auto;
 
-  background: rgba(245, 247, 250, 0.18);
+  background: linear-gradient(
+  to right,
+  transparent,
+  rgba(245, 247, 250, 0.25),
+  transparent
+);
 }
 
 /* ===== NERO FRAME ===== */
