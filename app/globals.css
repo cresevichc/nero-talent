@@ -530,9 +530,15 @@ body {
   inset: 0;
   pointer-events: none;
 
-  background: radial-gradient(
+  background:
+  radial-gradient(
     600px circle at 20% 15%,
     rgba(255, 255, 255, 0.05),
+    transparent 60%
+  ),
+  radial-gradient(
+    500px circle at 85% 0%,
+    rgba(255, 255, 255, 0.03),
     transparent 60%
   );
 }
