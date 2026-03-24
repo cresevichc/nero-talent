@@ -525,3 +525,14 @@ body {
   font-size: 46px !important;
   line-height: 1;
 }
+.background-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background: radial-gradient(
+    600px circle at 20% 15%,
+    rgba(255, 255, 255, 0.05),
+    transparent 60%
+  );
+}
