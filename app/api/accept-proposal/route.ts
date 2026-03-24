@@ -60,7 +60,7 @@ export async function POST(req: Request) {
         values: [["Accettata"]]
       }
     })
-
+    const emailCliente = match[8] || ""
     return NextResponse.json({
     success: true,
     nome: match[0] || "",
