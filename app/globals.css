@@ -46,6 +46,22 @@ body {
   background-size: 100% 200%;
   animation: lineFloat 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
+.vertical-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  opacity: 0.35;
+  filter: blur(4px);
+}
 
 @keyframes lineFloat {
   0% { background-position: 0% 0%; }
