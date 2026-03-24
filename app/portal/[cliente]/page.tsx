@@ -202,6 +202,7 @@ justifyContent: "center",
 >
 
 <div
+className="portal-card"  
 style={{
 padding: "20px",
 background: "#111",
@@ -227,6 +228,7 @@ borderRadius: "10px"
 </div>
 
 <div
+className="portal-card"
 style={{
 padding: "20px",
 background: "#111",
@@ -238,6 +240,7 @@ borderRadius: "10px"
 <p style={{opacity:0.7,marginTop:"10px"}}>PLACEMENTS</p>
 </div>
 <div
+className="portal-card"
 style={{
 padding: "20px",
 background: "#111",
