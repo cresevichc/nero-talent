@@ -214,12 +214,13 @@ borderRadius: "10px"
 </div>
 
 <div
-style={{
-padding: "20px",
-background: "#111",
-border: "1px solid #222",
-borderRadius: "10px"
-}}
+  className="portal-card"
+  style={{
+    padding: "20px",
+    background: "#111",
+    border: "1px solid #222",
+    borderRadius: "10px"
+  }}
 >
 <h1 style={{margin:0}}>{candidatesInProcess}</h1>
 <p style={{opacity:0.7,marginTop:"10px"}}>CANDIDATES IN PROCESS</p>
