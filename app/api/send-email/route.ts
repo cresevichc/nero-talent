@@ -9,7 +9,11 @@ export async function POST(req: Request) {
     const body = await req.json()
 
     const { nome, cliente, emailCliente, pdfBase64 } = body
-
+    console.log("EMAIL DATA:", {
+    nome,
+    cliente,
+    emailCliente
+    })
     const response = await resend.emails.send({
       
       from: "NERO Talent <info@nerotalent.com>",
