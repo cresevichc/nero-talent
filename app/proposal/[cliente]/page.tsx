@@ -138,7 +138,7 @@ export default function ProposalPage({
           <p>
             Il compenso per l’attività di ricerca e selezione è pari al <b>20% della Retribuzione Annua
               Lorda (RAL)</b>.
-          </p>
+          <p>
           </p>
             Il pagamento dovrà essere effettuato entro 30 giorni dalla data di ingresso del candidato in azienda.
           </p>
